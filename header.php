@@ -39,12 +39,12 @@
                         <i class='fa-solid fa-xmark text-right m-2 fs-5'></i>
                         <li class="nav-item"><a class="nav-link" aria-current="page" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link me-md-3" href="#">Categories</a></li>
-                        <li class="nav-item"><a class="nav-link me-md-3" href="#">Politics</a></li>
-                        <li class="nav-item"><a class="nav-link me-md-3" href="#">Business</a></li>
-                        <li class="nav-item"><a class="nav-link me-md-3" href="#">Health</a></li>
-                        <li class="nav-item"><a class="nav-link me-md-3" href="#">Design</a></li>
-                        <li class="nav-item"><a class="nav-link me-md-3" href="#">Sport</a></li>
-                        <li class="nav-item"><a class="nav-link me-md-3" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Politics</a></li>
+                        <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Business</a></li>
+                        <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Health</a></li>
+                        <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Design</a></li>
+                        <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Sport</a></li>
+                        <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
