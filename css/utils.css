@@ -1,0 +1,16 @@
+
+.category-links ul li a:hover,
+.logo-name:hover{
+    transition: color .20s ease-in-out;
+    color: #8BC34A !important;
+}
+
+.fa-paper-plane:hover,
+.fa-magnifying-glass:hover{
+    background: #8BC34A;
+    transition:background .30s ease-in-out;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #8BC34A !important;
+}
