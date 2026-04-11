@@ -37,7 +37,7 @@
                 <div class="col-12 border-bottom py-2 p-0">
                     <ul class="nav">
                         <i class='fa-solid fa-xmark text-right m-2 fs-5'></i>
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link me-md-3" href="#">Categories</a></li>
                         <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Politics</a></li>
                         <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Business</a></li>

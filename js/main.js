@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded',function(){
     $bars = document.querySelector('.fa-bars');
     $bars.addEventListener('click',function(){
         $NAV.style.right='0';
-    })
+    });
+
     // close menu bar
     $xmark = document.querySelector('.fa-xmark');
     $xmark.addEventListener('click',function(){
-        // $xmark.style.right = '-100%';
         $NAV.style.right='-100%';
-    })
+    });
 });

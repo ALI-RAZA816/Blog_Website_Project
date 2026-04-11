@@ -1,4 +1,4 @@
-<div class="col-4">
+<div class="col-md-4">
     <h2 class='fs-4 text-dark my-5'>Popular Posts</h2>
     <div class='d-flex mb-3 align-items-center'>
         <h2 class='text-secondary fs-3 me-3'>01</h2>

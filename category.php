@@ -1,8 +1,8 @@
 <?php include "header.php" ?>
 <div class="container">
     <div class="row gx-5">
-        <div class="col-8 p-0">
-            <h2 class='fs-5 my-5 text-secondary'>Category</h2>
+        <div class="col-md-8 p-0">
+            <h2 class='fs-5 ms-3 ms-md-0 my-5 text-secondary'>Category</h2>
             <div class="card border-0 mb-3">
                 <div class="row g-0">
                     <div class="col-md-8">
