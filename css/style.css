@@ -167,6 +167,34 @@ body{
     .fa-xmark{
         display: block ;
     }
-    
+}
 
+
+/* contact us page  */
+#contactForm input{
+    height: 45px;
+    /* width: 250px; */
+    border-radius: 100px;
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 1px 1px rgba(51, 51, 51,.20)!important;
+}
+
+#contactForm textarea{
+    height: 250px;
+    max-height: 250px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 1px 1px rgba(51, 51, 51,.20)!important;
+}
+
+#contactForm button{
+    height: 55px;
+    width: 250px;
+    outline: none;
+    border: none;
+    background: #333;
+    text-transform: uppercase;
+    border-radius: 100px;
 }

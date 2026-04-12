@@ -10,10 +10,8 @@
                 <i class="fa-solid fa-paper-plane ms-3"></i>
             </div>
         </div>
-        <div class="row bg-white py-4">
-            <div class="col-12 text-center">
-                <p class='text-muted fs-6 m-0'>Copyright ©2026 All rights reserved | This template is made with by Developer</p>
-            </div>
-        </div>
+    </div>
+    <div class="col-12 text-center bg-white py-4">
+        <p class='text-muted fs-6 m-0'>Copyright ©2026 All rights reserved | This template is made with by Developer</p>
     </div>
 </footer>

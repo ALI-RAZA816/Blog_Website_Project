@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center">
                 <div class="col-sm-6 d-flex justify-content-between align-items-center col-md-6">
-                    <h2 class="navbar-brand m-0"><a href="" class='logo-name text-dark text-decoration-none fw-bold fs-1'>Meranda</a></h2>
+                    <h2 class="navbar-brand m-0"><a href="index.php" class='logo-name text-dark text-decoration-none fw-bold fs-1'>Meranda</a></h2>
                       <i class='fa-solid fa-bars'></i>
                 </div>
                 <div class="col-sm-6 col-md-6 search d-flex justify-content-sm-end align-items-center ">
@@ -44,7 +44,7 @@
                         <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Health</a></li>
                         <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Design</a></li>
                         <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Sport</a></li>
-                        <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link me-md-3" href="contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
