@@ -39,10 +39,11 @@
                 <div class="col-12 ">
                     <div class="row p-0 g-0 d-flex justify-content-center">
                         <div class="col-8 pe-4">
+                            <h2 class='my-4 fw-bold recent-post'>Recent Posts</h2>
                             <div class='bg-secondary-subtle p-2 rounded-3'>
                                 <table class="table">
                                     <thead>
-                                        <tr>
+                                        <tr >
                                             <th class="col-5 text-secondary" style='background-color:transparent;'>Atricle Detail</th>
                                             <th class="col-2 text-secondary" style='background-color:transparent;'>Status</th>
                                             <th class="col-3 text-secondary" style='background-color:transparent;'>Author</th>
@@ -53,13 +54,104 @@
                                         <tr>
                                             <td>
                                                 <div class='row g-0 p-0'>
-                                                    <div class="col-3"><img src="../1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" alt=""></div>
-                                                    <div class="col-9"></div>
+                                                    <div class="col-3 p-1 bg-secondary-subtle rounded-2"><img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid' alt=""></div>
+                                                    <div class="col-9">
+                                                        <h2 class='text-dark fs-6 ms-2'>The future of Minilist Architect</h2>
+                                                        <span class="badge ms-2 rounded-pill text-bg-secondary">Category</span>
+                                                    </div>
                                                 </div>
                                             </td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>@mdo</td>
+                                            <td><span class="badge mt-3 rounded-pill text-bg-secondary">Published</span></td>
+                                            <td>
+                                                <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt="">
+                                                <span class='text-secondary ms-2'>Ali Raza</span>
+                                            </td>
+                                            <td><p class='text-secondary mt-3'>Oct 24, 2025</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class='row g-0 p-0'>
+                                                    <div class="col-3 p-1 bg-secondary-subtle rounded-2"><img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid' alt=""></div>
+                                                    <div class="col-9">
+                                                        <h2 class='text-dark fs-6 ms-2'>The future of Minilist Architect</h2>
+                                                        <span class="badge ms-2 rounded-pill text-bg-secondary">Category</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge mt-3 rounded-pill text-bg-secondary">Published</span></td>
+                                            <td>
+                                                <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt="">
+                                                <span class='text-secondary ms-2'>Ali Raza</span>
+                                            </td>
+                                            <td><p class='text-secondary mt-3'>Oct 24, 2025</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class='row g-0 p-0'>
+                                                    <div class="col-3 p-1 bg-secondary-subtle rounded-2"><img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid' alt=""></div>
+                                                    <div class="col-9">
+                                                        <h2 class='text-dark fs-6 ms-2'>The future of Minilist Architect</h2>
+                                                        <span class="badge ms-2 rounded-pill text-bg-secondary">Category</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge mt-3 rounded-pill text-bg-secondary">Published</span></td>
+                                            <td>
+                                                <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt="">
+                                                <span class='text-secondary ms-2'>Ali Raza</span>
+                                            </td>
+                                            <td><p class='text-secondary mt-3'>Oct 24, 2025</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class='row g-0 p-0'>
+                                                    <div class="col-3 p-1 bg-secondary-subtle rounded-2"><img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid' alt=""></div>
+                                                    <div class="col-9">
+                                                        <h2 class='text-dark fs-6 ms-2'>The future of Minilist Architect</h2>
+                                                        <span class="badge ms-2 rounded-pill text-bg-secondary">Category</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge mt-3 rounded-pill text-bg-secondary">Published</span></td>
+                                            <td>
+                                                <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt="">
+                                                <span class='text-secondary ms-2'>Ali Raza</span>
+                                            </td>
+                                            <td><p class='text-secondary mt-3'>Oct 24, 2025</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class='row g-0 p-0'>
+                                                    <div class="col-3 p-1 bg-secondary-subtle rounded-2"><img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid' alt=""></div>
+                                                    <div class="col-9">
+                                                        <h2 class='text-dark fs-6 ms-2'>The future of Minilist Architect</h2>
+                                                        <span class="badge ms-2 rounded-pill text-bg-secondary">Category</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge mt-3 rounded-pill text-bg-secondary">Published</span></td>
+                                            <td>
+                                                <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt="">
+                                                <span class='text-secondary ms-2'>Ali Raza</span>
+                                            </td>
+                                            <td><p class='text-secondary mt-3'>Oct 24, 2025</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class='row g-0 p-0'>
+                                                    <div class="col-3 p-1 bg-secondary-subtle rounded-2"><img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid' alt=""></div>
+                                                    <div class="col-9">
+                                                        <h2 class='text-dark fs-6 ms-2'>The future of Minilist Architect</h2>
+                                                        <span class="badge ms-2 rounded-pill text-bg-secondary">Category</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge mt-3 rounded-pill text-bg-secondary">Published</span></td>
+                                            <td>
+                                                <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt="">
+                                                <span class='text-secondary ms-2'>Ali Raza</span>
+                                            </td>
+                                            <td><p class='text-secondary mt-3'>Oct 24, 2025</p></td>
                                         </tr>
                                     </tbody>
                                 </table>
