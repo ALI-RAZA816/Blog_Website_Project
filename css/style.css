@@ -259,6 +259,11 @@ body{
     color: royalblue;
 }
 
-.recent-post{
+.recent-post,
+.recent-user{
     color: royalblue ;
+}
+
+.users{
+    box-shadow: 0 0 10px rgba(51, 51, 51,.15);
 }
