@@ -22,7 +22,7 @@
             <div class="row d-flex justify-content-between align-items-center">
                 <div class="col-sm-6 d-flex justify-content-between align-items-center col-md-6">
                     <h2 class="navbar-brand m-0"><a href="index.php" class='logo-name text-dark text-decoration-none fw-bold fs-1'>Meranda</a></h2>
-                      <i class='fa-solid fa-bars'></i>
+                      <i class='fa-solid fa-bars' id='bars'></i>
                 </div>
                 <div class="col-sm-6 col-md-6 search d-flex justify-content-sm-end align-items-center ">
                     <input type="text" class="form-control me-3" placeholder='Search'>
@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-12 border-bottom py-2 p-0">
                     <ul class="nav">
-                        <i class='fa-solid fa-xmark text-right m-2 fs-5'></i>
+                        <i class='fa-solid fa-xmark text-right m-2 fs-5' id='xmark'></i>
                         <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link me-md-3" href="#">Categories</a></li>
                         <li class="nav-item"><a class="nav-link me-md-3" href="category.php">Politics</a></li>

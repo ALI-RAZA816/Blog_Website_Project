@@ -1,32 +1,33 @@
 <div class="cotainer-fluid">
     <div class="row g-0">
-        <div class="col-2 vh-100 bg-white sidebar">
+        <div class="col-lg-2 vh-100 bg-white sidebar px-3 py-4">
+            <i class='fa-solid fa-angle-right' id='dashboard-angle-right'></i>
             <?php include "sidebar.php" ?>
         </div>
-        <div class="col-10 border">
+        <div class="col-lg-10 border">
             <?php include "header.php" ?>
             <div class="row g-0 p-0">
                 <div class="col-12 px-5 py-3">
                     <div class="row gy-5 p-0">
-                        <div class ='col-3'>
+                        <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
                                 <span class='fw-bold fs-3 mb-3'>Posts</span>
                                 <span class='fw-bold fs-5 text-secondary'>12,500</span>
                             </div>
                         </div>
-                        <div class ='col-3'>
+                        <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
                                 <span class='fw-bold fs-3 mb-3'>Categories</span>
                                 <span class='fw-bold fs-5 text-secondary'>12,500</span>
                             </div>
                         </div>
-                        <div class ='col-3'>
+                        <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
                                 <span class='fw-bold fs-3 mb-3'>Users</span>
                                 <span class='fw-bold fs-5 text-secondary'>12,500</span>
                             </div>
                         </div>
-                        <div class ='col-3'>
+                        <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
                                 <span class='fw-bold fs-3 mb-3'>Admins</span>
                                 <span class='fw-bold fs-5 text-secondary'>12,500</span>
@@ -41,7 +42,7 @@
                         <div class="col-xl-8 px-2 pe-4">
                             <h2 class='my-4 fw-bold recent-post'>Recent Posts</h2>
                             <div class='bg-secondary-subtle p-2 rounded-3'>
-                                <table class="table">
+                                <table class="table table-responsive">
                                     <thead>
                                         <tr >
                                             <th class="col-5 text-secondary" style='background-color:transparent;'>Atricle Detail</th>

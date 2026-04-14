@@ -140,8 +140,8 @@ body{
     cursor: pointer;
 }
 
-.fa-bars,
-.fa-xmark{
+#bars,
+#xmark{
     font-size: 1.5rem;
     cursor: pointer;
     color: #333;
@@ -203,7 +203,6 @@ body{
 
 .sidebar{
     background-color: #fff;
-    padding: 1rem 2rem;
     box-shadow:  0 0 10px #efefef;
 }
 
@@ -230,8 +229,9 @@ body{
 }
 .search-bar input{
     height: 40px;
-    width: 250px;
-    border: none;
+    width:100%;
+    max-width: 250px;
+    border:none;
     outline: none;
     background: none;
     box-shadow:none !important;
@@ -266,4 +266,33 @@ body{
 
 .users{
     box-shadow: 0 0 10px rgba(51, 51, 51,.15);
+}
+
+#dashboard-angle-right{
+    display: none;
+}
+
+@media screen and (max-width:992px) {
+    .sidebar{
+        position: absolute;
+        z-index: 999;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        max-width:250px;
+    }
+
+    #dashboard-angle-right{
+        position: absolute;
+        right: -13;
+        top: 5px;
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 0 10px #efefef;
+    }
 }
