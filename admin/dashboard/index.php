@@ -36,9 +36,9 @@
                 </div>
             </div>
             <div class="row p-0 g-0">
-                <div class="col-12 ">
+                <div class="col-12">
                     <div class="row p-0 g-0 d-flex justify-content-center">
-                        <div class="col-8 pe-4">
+                        <div class="col-xl-8 px-2 pe-4">
                             <h2 class='my-4 fw-bold recent-post'>Recent Posts</h2>
                             <div class='bg-secondary-subtle p-2 rounded-3'>
                                 <table class="table">
@@ -140,7 +140,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-xl-3 px-2">
                             <div>
                                 <h4 class='my-4 fw-bold recent-user'>Recent Users</h4>
                                 <div class='row g-0 p-0'>
