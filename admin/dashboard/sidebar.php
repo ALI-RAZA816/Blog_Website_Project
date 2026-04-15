@@ -29,6 +29,9 @@
             <li class="nav-item">
                 <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" href="category.php"><i class="fa-solid fa-shapes me-2"></i>Categories</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" href="user.php"><i class="fa-solid fa-users me-2"></i>Users</a>
+            </li>
         </ul>
     </div>
     <script src='../../js/dashboard.js'></script>
