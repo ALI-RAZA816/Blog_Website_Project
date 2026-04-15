@@ -261,6 +261,7 @@ body{
 }
 
 .recent-post,
+.category,
 .recent-user{
     color: royalblue ;
 }
@@ -309,5 +310,29 @@ body{
 .fa-edit,
 .fa-trash{
     cursor: pointer;
+    color: royalblue;
+}
+
+.add-category{
+    box-shadow: 0 0 10px #efefef;
+}
+
+.addcatBtn{
+    background-color: royalblue;
+    color: #fff;
+}
+
+.fa-box{
+    height: 35px;
+    width: 35px;
+    border-radius:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: royalblue;
+    background-color: #efefef;
+}
+
+.post-number{
     color: royalblue;
 }
