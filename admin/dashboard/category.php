@@ -20,8 +20,8 @@
                         <button class='btn btn-primary mt-3 d-block w-100 addcatBtn'>Add Category</button>
                     </form>
                 </div>
-                <div class="col-md-8 ms-md-3 mt-3 mt-md-0">
-                    <h2 class='fs-4 text-uppercase'>Categories Record</h2>
+                <div class="col-md-8 ms-md-5 mt-3 mt-md-0">
+                    <h2 class='fs-3 fw-bold text-uppercase' style='color:royalblue;'>Categories Record</h2>
                     <div class="row bg-secondary-subtle rounded-3 p-2 p-0 g-0">
                         <div class="col-12 mb-2 d-flex justify-content-between align-items-center rounded-3 bg-white px-3 py-2">
                             <div class='d-flex align-items-center'>
