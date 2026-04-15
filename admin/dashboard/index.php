@@ -11,26 +11,26 @@
                     <div class="row gy-5 p-0">
                         <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
-                                <span class='fw-bold fs-3 mb-3'>Posts</span>
-                                <span class='fw-bold fs-5 text-secondary'>12,500</span>
+                                <span class='fw-bold fs-5 mb-3'>Posts</span>
+                                <span class='fw-bold fs-1 text-secondary'>12,500</span>
                             </div>
                         </div>
                         <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
-                                <span class='fw-bold fs-3 mb-3'>Categories</span>
-                                <span class='fw-bold fs-5 text-secondary'>12,500</span>
+                                <span class='fw-bold fs-5 mb-3'>Categories</span>
+                                <span class='fw-bold fs-1 text-secondary'>12,500</span>
                             </div>
                         </div>
                         <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
-                                <span class='fw-bold fs-3 mb-3'>Users</span>
-                                <span class='fw-bold fs-5 text-secondary'>12,500</span>
+                                <span class='fw-bold fs-5 mb-3'>Users</span>
+                                <span class='fw-bold fs-1 text-secondary'>12,500</span>
                             </div>
                         </div>
                         <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
-                                <span class='fw-bold fs-3 mb-3'>Admins</span>
-                                <span class='fw-bold fs-5 text-secondary'>12,500</span>
+                                <span class='fw-bold fs-5 mb-3'>Admins</span>
+                                <span class='fw-bold fs-1 text-secondary'>12,500</span>
                             </div>
                         </div>
                     </div>
@@ -41,8 +41,8 @@
                     <div class="row p-0 g-0 d-flex justify-content-center">
                         <div class="col-xl-8 px-2 pe-4">
                             <h2 class='my-4 fw-bold recent-post'>Recent Posts</h2>
-                            <div class='bg-secondary-subtle p-2 rounded-3'>
-                                <table class="table table-responsive">
+                            <div class='bg-secondary-subtle p-2 rounded-3 table-responsive'>
+                                <table class="table">
                                     <thead>
                                         <tr >
                                             <th class="col-5 text-secondary" style='background-color:transparent;'>Atricle Detail</th>

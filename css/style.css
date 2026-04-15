@@ -297,3 +297,17 @@ body{
         box-shadow: 0 0 10px #efefef;
     }
 }
+
+/* post  */
+
+.post-management{
+    color:royalblue;
+    background-color: #fff;
+    box-shadow: 0 0 10px #efefef;
+}
+
+.fa-edit,
+.fa-trash{
+    cursor: pointer;
+    color: royalblue;
+}
