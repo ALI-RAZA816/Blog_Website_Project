@@ -163,8 +163,8 @@ body{
         box-shadow: 0 0 10px rgba(51, 51, 51,.30);
     }
 
-    .fa-bars,
-    .fa-xmark{
+    #bars,
+    #xmark{
         display: block ;
     }
 }
@@ -202,6 +202,7 @@ body{
 /* sidebar */
 
 .sidebar{
+    transition: left .50s ease-in-out;
     background-color: #fff;
     box-shadow:  0 0 10px #efefef;
 }
@@ -244,7 +245,7 @@ body{
 
 .user{
     height: 40px;
-    width: 40px;
+    min-width: 40px;
     border-radius: 100%;
     border: 1px solid #333;
 }
@@ -276,7 +277,7 @@ body{
     .sidebar{
         position: absolute;
         z-index: 999;
-        left: -100%;
+        left:-100%;
         top: 0;
         width: 100%;
         max-width:250px;

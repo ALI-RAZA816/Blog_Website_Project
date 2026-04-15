@@ -7,7 +7,7 @@
         <div class="col-lg-10 border">
             <?php include "header.php" ?>
             <div class="row g-0 p-0">
-                <div class="col-12 px-5 py-3">
+                <div class="col-12 px-3 px-lg-5 py-3">
                     <div class="row gy-5 p-0">
                         <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">

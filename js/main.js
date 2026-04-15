@@ -1,5 +1,5 @@
-// Initialize Swiper
 document.addEventListener('DOMContentLoaded',function(){
+    // Initialize Swiper
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -16,14 +16,20 @@ document.addEventListener('DOMContentLoaded',function(){
 
     // show menu bar
     $NAV = document.querySelector('.nav');
-    $bars = document.querySelector('.fa-bars');
-    $bars.addEventListener('click',function(){
+    $bars = document.querySelector('#bars');
+    $bars.addEventListener('click',()=>{
         $NAV.style.right='0';
     });
 
     // close menu bar
-    $xmark = document.querySelector('.fa-xmark');
-    $xmark.addEventListener('click',function(){
+    $xmark = document.querySelector('#xmark');
+    $xmark.addEventListener('click', ()=>{
         $NAV.style.right='-100%';
     });
+     
 });
+
+
+
+
+
