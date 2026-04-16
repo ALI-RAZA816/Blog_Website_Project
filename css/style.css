@@ -336,3 +336,23 @@ body{
 .post-number{
     color: royalblue;
 }
+
+.post-title{
+    height: 70px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.post-title::placeholder{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #d3d3d3;
+}
+
+.post-description{
+    height: 500px;
+}
+
+.category-box::-webkit-scrollbar{
+    display: none;
+}

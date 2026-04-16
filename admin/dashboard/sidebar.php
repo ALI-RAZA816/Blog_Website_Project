@@ -17,25 +17,30 @@
     <link rel="stylesheet" href="../../css/utils.css"/>
 </head>
 <body>
-    <div>
-        <h1 class='fs-5 mb-3 text-dark fw-bold'>The Editorial Architect</h1>
-        <ul class="nav flex-column sidebar-ul">
-            <li class="nav-item">
-                <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" aria-current="page" href="index.php"><i class="fa-solid fa-bars-progress me-2"></i>Dashboard</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" href="post.php"><i class="fa-solid fa-receipt me-2"></i>Posts</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" href="category.php"><i class="fa-solid fa-shapes me-2"></i>Categories</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" href="user.php"><i class="fa-solid fa-users me-2"></i>Users</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" href="setting.php"><i class="fa-solid fa-gear me-2"></i>Settings</a>
-            </li>
-        </ul>
+    <div class='d-flex flex-column justify-content-between' style='height:90vh;'>
+        <div>
+            <h1 class='fs-5 mb-3 text-dark fw-bold'>The Editorial Architect</h1>
+            <ul class="nav flex-column sidebar-ul">
+                <li class="nav-item">
+                    <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" aria-current="page" href="index.php"><i class="fa-solid fa-bars-progress me-2"></i>Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" href="post.php"><i class="fa-solid fa-receipt me-2"></i>Posts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" href="category.php"><i class="fa-solid fa-shapes me-2"></i>Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" href="user.php"><i class="fa-solid fa-users me-2"></i>Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary rounded-1 mb-1 d-flex align-items-center" href="setting.php"><i class="fa-solid fa-gear me-2"></i>Settings</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <a href="create-post.php" class='text-decoration-none'><button class='btn btn-primary d-block w-100' style='background-color:royalblue;border:none;height:40px;'><i class="fa-solid fa-plus me-2"></i>Create Post</button></a>
+        </div>
     </div>
     <script src='../../js/dashboard.js'></script>
 </body>
