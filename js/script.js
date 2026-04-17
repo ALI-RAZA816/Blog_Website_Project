@@ -93,4 +93,18 @@ $(document).ready(function(){
             }
         });
     });
+
+    // handle pagination 
+    $(document).on('click','.page-link',function(event){
+        event.preventDefault();
+        var pageNo = $(this).data('page');
+        $.ajax({
+            url:'script/show-category.php',
+            type:'POST',
+            data:{page_no:pageNo},
+            success:function(data){
+                $('.category-output').html(data);
+            }
+        })
+    })
 });

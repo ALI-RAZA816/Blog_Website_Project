@@ -1,7 +1,14 @@
 <?php
 
     include "config.php";
-    $query = "SELECT * FROM category";
+    $limit = 3;
+    if(isset($_POST['page_no'])){
+        $page = $_POST['page_no'];
+    }else{
+        $page = 1;
+    }
+    $offset = ($page - 1) * $limit;
+    $query = "SELECT * FROM category LIMIT {$offset}, {$limit}";
     $result = mysqli_query($connection, $query);
     $output = '';
     if(mysqli_num_rows($result) > 0){
@@ -21,6 +28,23 @@
                             </div>
                         </div>";
         }
+        $query = "SELECT * FROM category";
+        $result1 = mysqli_query($connection, $query);
+        $totalRecords = mysqli_num_rows($result1);
+        $totalPages = ceil($totalRecords/$limit);
+        $output .= "     <nav>
+                        <ul class='pagination d-flex mt-3 justify-content-end me-5'>
+                        <li class='page-item'><a href='#' class='page-link d-flex align-items-center' style='height:100%;'><i class='fa-solid fa-angle-left'></i></a></li>";
+                        for($i=1; $i <= $totalPages; $i++){
+                            if($i == $page){
+                                $active = 'active';
+                            }else{
+                                $active = '';
+                            }
+                            $output .= "<li class='page-item'><a class='page-link $active' href='category.php?' data-page={$i}>{$i}</a></li>";
+                        }
+        $output .= " <li class='page-item'><a class='page-link d-flex align-items-center' style='height:100%;' href='#'><i class='fa-solid fa-angle-right'></i></a></li></ul>
+                </nav>";
     }else{
         echo "<h2 class='fs-4 text-dark m-0'>No record found</h2>";
     }
