@@ -20,26 +20,18 @@
     <div class="container-fluid p-0 bg-white">
         <div class="row d-flex vh-100 justify-content-center align-items-center">
             <div class="col-3 bg-white rounded-3 p-3" style='box-shadow:0 0 10px #efefef;'>
-                <h2 style='color:royalblue' class='fw-bold text-center'>SignUp</h2>
+                <h2 style='color:royalblue' class='fw-bold text-center'>Login</h2>
                 <form action="">
                     <div>
-                        <label for="" class='form-label'>First Name</label>
-                        <div><input type="text" class='form-control'></div>
-                    </div>
-                    <div>
-                        <label for="" class='form-label'>Last Name</label>
+                        <label for="" class='form-label'>Email</label>
                         <div><input type="text" class='form-control'></div>
                     </div>
                     <div>
                         <label for="" class='form-label'>Password</label>
                         <div><input type="password" class='form-control'></div>
                     </div>
-                    <div>
-                        <label for="" class='form-label'>Email</label>
-                        <div><input type="text" class='form-control'></div>
-                    </div>
-                    <button style='background-color:royalblue;border-color:royalblue;' class='btn mt-3 btn-primary d-block w-100'>SignUp</button>
-                    <span class='d-flex mt-2'>Already have an account <a href="login.php" class='text-decoration-none ms-2' style='color:royalblue;'>Login</a></span>
+                    <button style='background-color:royalblue;border-color:royalblue;' class='btn mt-3 btn-primary d-block w-100'>Login</button>
+                    <span class='d-flex mt-2'>Don't have an account<a href="index.php" class='text-decoration-none ms-2' style='color:royalblue;'>SignUp</a></span>
                 </form>
             </div>
         </div>

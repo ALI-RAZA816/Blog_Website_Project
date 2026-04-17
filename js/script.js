@@ -4,6 +4,7 @@ $(document).ready(function(){
         var categoryName = $('.category-name').val();
         if(!categoryName || categoryName == ''){
             alert('Field is required');
+            return;
         }
 
         $.ajax({
@@ -20,4 +21,4 @@ $(document).ready(function(){
             }
         })
     });
-})
+});
