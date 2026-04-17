@@ -29,4 +29,13 @@
             </div>
         </div>
     </div>
+    <div class="row update-category-box">
+        <!-- <div class="col-3 bg-white rounded-3">
+            <h2 class='fs-5 my-4 fw-bold text-center text-uppercase'>Edit</h2>
+            <form action="">
+                <input type="text" placeholder='Category' class='form-control category-name'>
+                <button class='btn btn-primary mt-3 mb-3 d-block w-100 updatecatBtn' style='background-color:royalblue;border-color:royalblue;'>Edit Category</button>
+            </form>
+        </div> -->
+    </div>
 </div>

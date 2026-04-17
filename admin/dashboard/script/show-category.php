@@ -16,11 +16,13 @@
                                 <span class='m-0 fw-bold text-secondary post-text'>Posts</span>
                             </div>
                             <div>
-                                <i class='fa-solid fa-edit'></i>
+                                <i class='fa-solid fa-edit' data-updatecatid = {$row['id']}></i>
                                 <i class='fa-solid fa-trash' data-catid = {$row['id']}></i>
                             </div>
                         </div>";
         }
+    }else{
+        echo "<h2 class='fs-4 text-dark m-0'>No record found</h2>";
     }
     echo $output;
 ?>

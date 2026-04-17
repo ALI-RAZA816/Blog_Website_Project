@@ -43,13 +43,54 @@ $(document).ready(function(){
             type:'POST',
             data:{cat_id :catId},
             success:function(data){
-                if(data== 'Category Deleted'){
+                if(data == 'Category Deleted'){
                     loadCategories();
                     alert('Category Deleted');
                 }else{
                     alert("Category cannot deleted");
                 }
             }
+        });
+    });
+
+    // show update-category-modal-box
+    $(document).on('click','.fa-edit',function(){
+        $('.update-category-box').css("display","flex");
+        var update_id = $(this).data('updatecatid');
+        $.ajax({
+            url:'script/modal-box.php',
+            type:'POST',
+            data:{updateID:update_id},
+            success:function(data){
+                $('.update-category-box').html(data);
+            }
         })
-    })
+    });
+    
+    // hide update-category-modal-box
+    $('.update-category-box').on('click',function(){
+        if($(event.target).is(this)){
+            $(this).css("display","none");
+        }
+    });
+
+    // update category button handler 
+    $(document).on('click','.updatecatBtn', function(event){
+        event.preventDefault();
+        var update_category_value = $('.update-category-value').val();
+        var update_category_id = $('.update-category-id').val();
+        $.ajax({
+            url:'script/save-update-category.php',
+            type:'POST',
+            data:{
+                updatecategoryvalue: update_category_value,
+                updatecategoryid: update_category_id
+            },
+            success:function(data){
+                loadCategories();
+                $('.update-category-box').css("display","none");
+
+            }
+        });
+    });
 });
