@@ -22,21 +22,8 @@
                 </div>
                 <div class="col-md-8 ms-md-5 mt-3 mt-md-0">
                     <h2 class='fs-3 fw-bold text-uppercase' style='color:royalblue;'>Categories Record</h2>
-                    <div class="row bg-secondary-subtle rounded-3 p-2 p-0 g-0">
-                        <div class="col-12 mb-2 d-flex justify-content-between align-items-center rounded-3 bg-white px-3 py-2">
-                            <div class='d-flex align-items-center'>
-                                <i class="fa-solid fa-box me-3"></i>
-                                <h5 class='mb-0 fw-bold'>Category Name</h5>
-                            </div>
-                            <div class='d-flex flex-column align-items-center'>
-                                <span class='m-0 fs-5 post-number fw-bold'>24</span>
-                                <span class='m-0 fw-bold text-secondary post-text'>Posts</span>
-                            </div>
-                            <div>
-                                <i class='fa-solid fa-edit'></i>
-                                <i class='fa-solid fa-trash'></i>
-                            </div>
-                        </div>
+                    <div class="row bg-secondary-subtle rounded-3 p-2 p-0 g-0 category-output">
+                        <!-- load category-from database -->
                     </div>
                 </div>
             </div>
