@@ -16,7 +16,7 @@
                 <div class="col-md-3 rounded-3 bg-white p-3 add-category">
                     <h2 class='fs-5 my-4 fw-bold text-center text-uppercase'>Add New Category</h2>
                     <form action="">
-                        <input type="text" placeholder='Category' class='form-control'>
+                        <input type="text" placeholder='Category' class='form-control category-name'>
                         <button class='btn btn-primary mt-3 d-block w-100 addcatBtn'>Add Category</button>
                     </form>
                 </div>
