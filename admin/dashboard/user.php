@@ -33,7 +33,7 @@
                     </nav>
                 </div>
             </div>
-            <div class="row edit-user-form">
+            <div class="row px-4 px-md-0  edit-user-form">
                 <!-- load edit-user-modal-box  -->
             </div>
         </div>

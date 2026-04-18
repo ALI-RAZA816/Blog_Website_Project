@@ -7,7 +7,7 @@
     $output = '';
     if(mysqli_num_rows($result) > 0){
         while($row = mysqli_fetch_assoc($result)){
-            $output .= "<div class='col-3 bg-white rounded-3 p-3'>
+            $output .= "<div class='col-sm-5 col-lg-3 bg-white rounded-3 p-3'>
                     <h2 class='fs-4 fw-bold' style='color:royalblue'>Edit User</h2>
                     <form action=''>
                         <div class='mb-2'>
@@ -26,10 +26,16 @@
                         <div class='mb-2'>
                             <label for='' class='form-label' >Role</label>
                             <div>
-                            <select id='' name='role' class='form-select'>
-                                <option value='admin'>Admin</option>
-                                <option value='user'>User</option>
-                            </select>
+                            <select id='' name='role' class='form-select'>";
+                            if($row['role'] == 'admin'){
+                                $output .= "<option selected value='admin'>Admin</option>
+                                <option value='user'>User</option>";
+                            }else{
+                                   $output .= "<option value='admin'>Admin</option>
+                                <option selected value='user'>User</option>";
+                            }
+                                
+                            $output .= "</select>
                             </div>
                         </div>
                         <div>
