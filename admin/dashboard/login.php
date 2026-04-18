@@ -24,17 +24,19 @@
                 <form action="">
                     <div>
                         <label for="" class='form-label'>Email</label>
-                        <div><input type="text" class='form-control'></div>
+                        <div><input type="text" class='form-control login-email'></div>
                     </div>
                     <div>
                         <label for="" class='form-label'>Password</label>
-                        <div><input type="password" class='form-control'></div>
+                        <div><input type="password" class='form-control login-password'></div>
                     </div>
-                    <button style='background-color:royalblue;border-color:royalblue;' class='btn mt-3 btn-primary d-block w-100'>Login</button>
+                    <button style='background-color:royalblue;border-color:royalblue;' class='btn mt-3 btn-primary d-block w-100 login-button'>Login</button>
                     <span class='d-flex mt-2'>Don't have an account<a href="index.php" class='text-decoration-none ms-2' style='color:royalblue;'>SignUp</a></span>
                 </form>
             </div>
         </div>
     </div>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 </html>

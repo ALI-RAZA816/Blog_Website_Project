@@ -41,7 +41,7 @@
                         <div>
                             <label for='' class='form-label'>Profile Photo</label>
                             <div><input type='file' name='upload_file' class='form-control'></div>
-                            <div><input type='text' class='form-control' name='old_image' value='{$row['profile_img']}'></div>
+                            <div><input type='hidden' class='form-control' name='old_image' value='{$row['profile_img']}'></div>
                         </div>
                         <button type='submit' style='background-color:royalblue;border-color:royalblue;' class='btn mt-3 btn-primary d-block w-100 user-update'>Update</button>
                     </form>

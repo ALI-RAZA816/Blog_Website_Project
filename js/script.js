@@ -172,7 +172,7 @@ $(document).ready(function(){
                     $('.lastname').val('');
                     $('.password').val('');
                     $('.email').val('');
-                    window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/dashboard.php";
+                    window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/login.php";
                }
             }
         });
@@ -241,5 +241,40 @@ $(document).ready(function(){
     // show logout button 
     $(".user").on('click',function(){
         $(".logout").toggleClass("showlogbutton");
+    });
+
+    // handle login
+    $(".login-button").on('click',function(event){
+        event.preventDefault();
+        var login_email = $(".login-email").val();
+        var login_password = $(".login-password").val();
+
+      
+        if(!login_email || login_email == ''){
+            alert("Email is required");
+            return;
+        }
+        if(!login_password || login_password == ''){
+            alert("Password is required");
+            return;
+        }
+        $.ajax({
+            url:'script/save-login.php',
+            type:'POST',
+            data:{
+                email:login_email,
+                password:login_password
+            },
+            success:function(data){
+                // if(data == "Login Successful"){
+                //     alert("Login Successful");
+                    window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/dashboard.php";
+                // }else if(data =="Incorrect email"){
+                //     alert("Incorrect email");
+                // }else if(data == "Incorrect password"){
+                //     alert("Incorrect password");
+                // }
+            }
+        });
     });
 });
