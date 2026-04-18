@@ -23,8 +23,8 @@
                                 <span class='m-0 fw-bold text-secondary post-text'>Posts</span>
                             </div>
                             <div>
-                                <i class='fa-solid fa-edit' data-updatecatid = {$row['id']}></i>
-                                <i class='fa-solid fa-trash' data-catid = {$row['id']}></i>
+                                <i class='fa-solid fa-edit' id='update-category' data-updatecatid = {$row['id']}></i>
+                                <i class='fa-solid fa-trash' id='delete-category' data-catid = {$row['id']}></i>
                             </div>
                         </div>";
         }

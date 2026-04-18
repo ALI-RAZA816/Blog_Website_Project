@@ -36,7 +36,7 @@ $(document).ready(function(){
     });
 
     // delete category
-    $(document).on('click','.fa-trash',function(){
+    $(document).on('click','#delete-category',function(){
         var catId = $(this).data('catid');
         $.ajax({
             url:'script/delete-category.php',
@@ -54,7 +54,7 @@ $(document).ready(function(){
     });
 
     // show update-category-modal-box
-    $(document).on('click','.fa-edit',function(){
+    $(document).on('click','#update-category',function(){
         $('.update-category-box').css("display","flex");
         var update_id = $(this).data('updatecatid');
         $.ajax({
@@ -176,5 +176,23 @@ $(document).ready(function(){
                }
             }
         });
+    });
+
+    // delete user
+    $(document).on('click',"#delete-user",function(){
+        var deleteId = $(this).data('userid');
+        $.ajax({
+            url:'script/delete-user.php',
+            type:'POST',
+            data:{delete_id:deleteId},
+            success:function(data){
+                if(data == "User successfully deleted"){
+                    loadUsers();
+                    alert("User Successfully Deleted");
+                }else{
+                    alert("User cannot Deleted");
+                }
+            }
+        })
     });
 });

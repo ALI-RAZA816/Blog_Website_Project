@@ -29,7 +29,7 @@
         die();
     }
 
-    $query4 = "INSERT INTO users (first_name, last_name, username, password, email, profile_img) VALUES ('{$FIRST_NAME}', '{$LAST_NAME}', '{$USER_NAME}', '{$PASSWORD}', '{$EMAIL}', '{$FIRST_LETTER}')";
+    $query4 = "INSERT INTO users (first_name, last_name, username, password, email, first_letter) VALUES ('{$FIRST_NAME}', '{$LAST_NAME}', '{$USER_NAME}', '{$PASSWORD}', '{$EMAIL}', '{$FIRST_LETTER}')";
     $result4 = mysqli_query($connection, $query4);
     if($result4){
         echo "Data successfully inserted";
