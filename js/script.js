@@ -195,4 +195,47 @@ $(document).ready(function(){
             }
         })
     });
+
+    // show edit-user-modal-box
+    $(document).on("click","#edit-user",function(){
+        $(".edit-user-form").css("display","flex");
+        var editId = $(this).data('editid');
+        $.ajax({
+            url:'script/edit-user.php',
+            type:'POST',
+            data:{edit_id:editId},
+            success:function(data){
+                $('.edit-user-form').html(data);
+            }
+        })
+    });
+
+    // hide edit-user-modal-box
+    $(".edit-user-form").on("click",function(){
+        if($(event.target).is(this)){
+            $(".edit-user-form").css("display","none");
+        }
+    });
+
+    // save-update-user data
+    $(document).on('click',".user-update",function(event){
+        event.preventDefault();
+        var form = $(this).closest('form')[0]; // get the form element
+        var formData = new FormData(form); 
+        $.ajax({
+            url:'script/save-edit-user.php',
+            type:'POST',
+            data:formData,
+            contentType:false,
+            processData:false,
+            success:function(data){
+                $(".edit-user-form").css("display","none");
+                loadUsers();
+            },
+            error:function(){
+                alert("Error");
+            }
+        })
+    })
+
 });

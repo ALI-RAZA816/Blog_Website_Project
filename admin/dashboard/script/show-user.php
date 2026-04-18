@@ -7,11 +7,11 @@
         while($row = mysqli_fetch_assoc($resutl)){
             $output .= " <div style='height:95px;' class='col-12 mb-2 d-flex align-items-center justify-content-between users rounded-2 px-4 p-2'>
                             <div class='d-flex'>
-                            <div class='rounded-circle d-flex bg-secondary-subtle justify-content-center align-items-center border' style='height:50px;width:50px;'>";
+                            <div class='rounded-circle d-flex bg-secondary-subtle justify-content-center align-items-center border' style='height:50px;width:50px;overflow:hidden;'>";
                             if(!$row['profile_img']){
                                 $output .= "<span class='text-secondary fs-3'>{$row['first_letter']}</span>";
                             }else{
-                                $output .= "<img src='../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg' class='img-fluid rounded-circle mt-2' style='height:50px;width:50px;'alt=''>";
+                                $output .= "<img src='../uploads/user/{$row['profile_img']}' class='img-fluid rounded-circle' style='height:50px;width:50px;'alt=''>";
                             }
                             $output .= "</div>
                                 <div class='mt-2 ms-2'>
@@ -21,7 +21,7 @@
                                 </div>
                             </div>
                             <div>
-                                <i class='fa-solid fa-edit'></i>
+                                <i class='fa-solid fa-edit' id='edit-user' data-editid={$row['id']}></i>
                                 <i class='fa-solid fa-trash' id='delete-user' data-userid={$row['id']}></i>
                             </div>
                         </div>";

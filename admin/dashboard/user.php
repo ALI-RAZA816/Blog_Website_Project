@@ -20,23 +20,6 @@
                 <div class="col-12">
                     <h2 class='fs-3 fw-bold' style='color:royalblue;'>Users</h2>
                     <div class='row d-flex flex-column userOuput align-items-start g-0 p-0' style='min-height:55vh;'>
-                        <!-- <div style='height:95px;' class="col-12 mb-2 d-flex align-items-center justify-content-between users rounded-2 px-4 p-2">
-                            <div class='d-flex'>
-                                <div class='rounded-circle d-flex bg-secondary-subtle justify-content-center align-items-center border' style='height:50px;width:50px;'>
-                                    <span class='text-secondary fs-3'>A</span>
-                                    <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:50px;width:50px;'alt="">
-                                </div>
-                                <div class='mt-2 ms-2'>
-                                    <h2 class='fw-bold fs-6 text-dark mb-0'>Name</h2>
-                                    <p class='text-secondary m-0 fs-6'>alirazamujahid102@gmail.com</p>
-                                    <span class="badge rounded-pill text-bg-dark text-uppercase">Admin</span>
-                                </div>
-                            </div>
-                            <div>
-                                <i class='fa-solid fa-edit'></i>
-                                <i class='fa-solid fa-trash'></i>
-                            </div>
-                        </div> -->
                         <!-- load user data from database  -->
                     </div>
                     <nav>
@@ -49,6 +32,9 @@
                         </ul>
                     </nav>
                 </div>
+            </div>
+            <div class="row edit-user-form">
+                <!-- load edit-user-modal-box  -->
             </div>
         </div>
     </div>
