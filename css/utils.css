@@ -14,3 +14,9 @@
 .swiper-pagination-bullet-active{
     background-color: #8BC34A !important;
 }
+
+.showlogbutton{
+    top: 45px;
+    opacity: 1;
+    visibility: visible;
+}

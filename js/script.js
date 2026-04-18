@@ -236,6 +236,10 @@ $(document).ready(function(){
                 alert("Error");
             }
         })
-    })
+    });
 
+    // show logout button 
+    $(".user").on('click',function(){
+        $(".logout").toggleClass("showlogbutton");
+    });
 });
