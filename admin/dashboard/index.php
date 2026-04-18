@@ -22,27 +22,29 @@
             <div class="col-3 bg-white rounded-3 p-3" style='box-shadow:0 0 10px #efefef;'>
                 <h2 style='color:royalblue' class='fw-bold text-center'>SignUp</h2>
                 <form action="">
-                    <div>
-                        <label for="" class='form-label'>First Name</label>
-                        <div><input type="text" class='form-control'></div>
+                    <div class='mb-2'>
+                        <label for="" class='form-label mb-1'>First Name</label>
+                        <div><input type="text" class='form-control firstname'></div>
                     </div>
-                    <div>
-                        <label for="" class='form-label'>Last Name</label>
-                        <div><input type="text" class='form-control'></div>
+                    <div class='mb-2'>
+                        <label for="" class='form-label mb-1'>Last Name</label>
+                        <div><input type="text" class='form-control lastname'></div>
                     </div>
-                    <div>
-                        <label for="" class='form-label'>Password</label>
-                        <div><input type="password" class='form-control'></div>
+                    <div class='mb-2'>
+                        <label for="" class='form-label mb-1'>Password</label>
+                        <div><input type="password" class='form-control password'></div>
                     </div>
                     <div>
                         <label for="" class='form-label'>Email</label>
-                        <div><input type="text" class='form-control'></div>
+                        <div><input type="text" class='form-control email'></div>
                     </div>
-                    <button style='background-color:royalblue;border-color:royalblue;' class='btn mt-3 btn-primary d-block w-100'>SignUp</button>
+                    <button style='background-color:royalblue;border-color:royalblue;' class='btn mt-3 btn-primary d-block w-100 signup'>SignUp</button>
                     <span class='d-flex mt-2'>Already have an account <a href="login.php" class='text-decoration-none ms-2' style='color:royalblue;'>Login</a></span>
                 </form>
             </div>
         </div>
     </div>
 </body>
+<script src='../../js/jquery.js'></script>
+<script src='../../js/script.js'></script>
 </html>

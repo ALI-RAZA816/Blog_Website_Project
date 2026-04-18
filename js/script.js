@@ -105,6 +105,76 @@ $(document).ready(function(){
             success:function(data){
                 $('.category-output').html(data);
             }
+        });
+    });
+
+       // show user data from database
+    function loadUsers(){
+        $.ajax({
+            url:'script/show-user.php',
+            success:function(data){
+                $('.userOuput').html(data);
+            }
         })
-    })
+    }
+    loadUsers();
+
+
+    // signup page
+    $('.signup').on('click',function(event){
+        event.preventDefault();
+        
+        var firstname = $('.firstname').val();
+        var lastname = $('.lastname').val();
+        var password = $('.password').val();
+        var email = $('.email').val();
+
+        if(!firstname || firstname == ''){
+            alert("Name is required");
+            return;
+        }
+        if(!lastname || lastname == ''){
+            alert("Lastname is required");
+            return;
+        }
+        if(!password || password == ''){
+            alert("Password is required");
+            return;
+        }
+        if(!email || email == ''){
+            alert("Email is required");
+            return;
+        }
+
+        $.ajax({
+            url:'script/user.php',
+            type:'POST',
+            data:{
+                first_name:firstname,
+                last_name:lastname,
+                user_name: firstname + lastname,
+                password:password,
+                Email:email
+            },
+            success:function(data){
+                if(data == "Name already exists"){
+                    alert("Name already exists");
+                }else if (data == "Lastname already exists"){
+                    alert("Lastname already exists");
+                }else if(data == "Email already exists"){
+                    alert("Email already exists");
+                }else if(data == "Failed to inserted data"){
+                    alert("Failed to inserted data");
+                }else if(data == "Data successfully inserted"){
+                    loadUsers();
+                    alert("Data successfully inserted");
+                    $('.firstname').val('');
+                    $('.lastname').val('');
+                    $('.password').val('');
+                    $('.email').val('');
+                    window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/dashboard.php";
+               }
+            }
+        });
+    });
 });
