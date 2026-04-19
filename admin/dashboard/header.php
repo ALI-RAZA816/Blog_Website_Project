@@ -5,11 +5,11 @@
             <i class='fa-solid fa-magnifying-glass search-icon'></i>
             <input type="text" class='form-control' placeholder='Search...'>
         </div>
-        <div class="user bg-secondary-subtle user-profile-icon d-flex justify-content-center align-items-center ms-2 ms-md-5">
-            <span class='text-dark'>A</span>
-            <div class="logout rounded-3">
-                <button class='logout-button rounded-2 px-2 d-flex justify-content-center align-items-center'><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</button>
-            </div>
+        <div class="user overflow-hidden bg-secondary-subtle user-profile-icon d-flex justify-content-center align-items-center ms-2 ms-md-5">
+            <div class='profile-img '></div>
+        </div>
+        <div class="logout rounded-3">
+            <button class='logout-button rounded-2 px-2 d-flex justify-content-center align-items-center'><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</button>
         </div>
     </div>
 </header>

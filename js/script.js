@@ -11,6 +11,17 @@ $(document).ready(function(){
     }
     loadCategories();
 
+    // handle header profile-img
+    function profile_img(){
+        $.ajax({
+            url:"script/profile-img.php",
+            success:function(data){
+                $(".profile-img").html(data);
+            }
+        });
+    }
+    profile_img();
+
     // add category
     $(".addcatBtn").on('click',function(event){
         event.preventDefault();
@@ -266,15 +277,28 @@ $(document).ready(function(){
                 password:login_password
             },
             success:function(data){
-                // if(data == "Login Successful"){
-                //     alert("Login Successful");
+                if(data == "Login Successful"){
+                    alert("Successful");
                     window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/dashboard.php";
-                // }else if(data =="Incorrect email"){
-                //     alert("Incorrect email");
-                // }else if(data == "Incorrect password"){
-                //     alert("Incorrect password");
-                // }
+                }else if(data == "Incorrect email"){
+                    alert("Incorrect email");
+                }else if(data == "Incorrect password"){
+                    alert("Incorrect password");
+                }else if (data == "Can't Login"){
+                    alert("Can't Login");
+                }
             }
         });
     });
+    
+    // handle logout
+    $(".logout-button").on('click',function(){
+       $.ajax({
+           url:"script/logout.php",
+           success:function(){
+               window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/index.php";
+            }
+       });
+    });
+
 });
