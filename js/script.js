@@ -199,6 +199,7 @@ $(document).ready(function(){
             success:function(data){
                 if(data == "User successfully deleted"){
                     loadUsers();
+                    profile_img();
                     alert("User Successfully Deleted");
                 }else{
                     alert("User cannot Deleted");
@@ -242,6 +243,7 @@ $(document).ready(function(){
             success:function(data){
                 $(".edit-user-form").css("display","none");
                 loadUsers();
+                profile_img();
             },
             error:function(){
                 alert("Error");
@@ -280,6 +282,7 @@ $(document).ready(function(){
                 if(data == "Login Successful"){
                     alert("Successful");
                     window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/dashboard.php";
+                    profile_img();
                 }else if(data == "Incorrect email"){
                     alert("Incorrect email");
                 }else if(data == "Incorrect password"){
@@ -296,6 +299,7 @@ $(document).ready(function(){
        $.ajax({
            url:"script/logout.php",
            success:function(){
+                profile_img();
                window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/index.php";
             }
        });

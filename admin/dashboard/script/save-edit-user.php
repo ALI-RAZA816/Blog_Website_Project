@@ -32,9 +32,12 @@
             die();
         }
 
-        move_uploaded_file($FILE_TEMP, "../../uploads/user/".$IMAGE_NAME);
+        $new_name = time()."-".basename($IMAGE_NAME);
+        $ACTUAL_IMAGE = "../../uploads/user/".$new_name;
+        move_uploaded_file($FILE_TEMP, $ACTUAL_IMAGE);
+
     }
 
-    $query = "UPDATE users SET first_name = '{$EDIT_FIRST_NAME}', last_name = '{$EDIT_LAST_NAME}', email = '{$EDIT_EMAIL}', role = '{$EDIT_USER_ROLE}', profile_img = '{$IMAGE_NAME}' WHERE id = {$EDIT_ID}";
+    $query = "UPDATE users SET first_name = '{$EDIT_FIRST_NAME}', last_name = '{$EDIT_LAST_NAME}', email = '{$EDIT_EMAIL}', role = '{$EDIT_USER_ROLE}', profile_img = '{$new_name}' WHERE id = {$EDIT_ID}";
     $result = mysqli_query($connection, $query);
 ?>
