@@ -1,6 +1,13 @@
 <?php 
     include "config.php";
-    $query = "SELECT * FROM users";
+    $limit = 3;
+    if(isset($_POST['pageNo'])){
+        $pageNo = $_POST['pageNo'];
+    }else{
+        $pageNo = 1;
+    }
+    $offset = ($pageNo - 1) * $limit;
+    $query = "SELECT * FROM users LIMIT {$offset}, {$limit}";
     $resutl = mysqli_query($connection, $query);
     $output = '';
     if(mysqli_num_rows($resutl) > 0){
@@ -26,6 +33,22 @@
                             </div>
                         </div>";
         }
+        $query1 = "SELECT * FROM users";
+        $result1 = mysqli_query($connection, $query1);
+        $totalRecords = mysqli_num_rows($result1);
+        $totalPages = ceil($totalRecords/$limit);
+        $output .= "<nav>
+                        <ul class='pagination d-flex mt-3 justify-content-end me-5'>";
+                            for($i=1; $i <= $totalPages; $i++){
+                                if($i == $pageNo){
+                                    $active = 'active';
+                                }else{
+                                    $active = '';
+                                }
+                                $output .="<li class='page-item'><a class='page-link $active user-pagination' data-userpage={$i} href='#'>{$i}</a></li>";
+                            }
+        $output .="</ul>
+                    </nav>";
     }else{
         echo "<h2 class='fs-5 fw-bold text-bold text-secondary'>No User found.</h2>";
     }

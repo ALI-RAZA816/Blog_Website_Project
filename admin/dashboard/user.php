@@ -22,7 +22,7 @@
                     <div class='row d-flex flex-column userOuput align-items-start g-0 p-0' style='min-height:55vh;'>
                         <!-- load user data from database  -->
                     </div>
-                    <nav>
+                    <!-- <nav>
                         <ul class="pagination d-flex mt-3 justify-content-end me-5">
                             <li class="page-item"><a href="#" class="page-link d-flex align-items-center" style='height:100%;'><i class='fa-solid fa-angle-left'></i></a></li>
                             <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -30,7 +30,7 @@
                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                             <li class="page-item"><a class="page-link d-flex align-items-center" style='height:100%;' href="#"><i class='fa-solid fa-angle-right'></i></a></li>
                         </ul>
-                    </nav>
+                    </nav> -->
                 </div>
             </div>
             <div class="row px-4 px-md-0  edit-user-form">

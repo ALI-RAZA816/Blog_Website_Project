@@ -305,4 +305,18 @@ $(document).ready(function(){
        });
     });
 
+    // handle user pagination
+    $(document).on('click','.user-pagination',function(event){
+        event.preventDefault();
+        var user_page_no = $(this).data('userpage');
+        $.ajax({
+            url:"script/show-user.php",
+            type:'POST',
+            data:{pageNo:user_page_no},
+            success:function(data){
+                $('.userOuput').html(data);
+            }
+        })
+    })
+
 });
