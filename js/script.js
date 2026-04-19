@@ -316,7 +316,7 @@ $(document).ready(function(){
             success:function(data){
                 $('.userOuput').html(data);
             }
-        })
-    })
+        });
+    });
 
 });

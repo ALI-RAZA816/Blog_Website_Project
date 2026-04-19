@@ -9,6 +9,7 @@
     $UPLOAD_FILE = $_FILES['upload_file'];
     $OLD_IMAGE = $_POST['old_image'];
 
+
     if(empty($_FILES['upload_file']['name'])){
         $IMAGE_NAME = $_POST['old_image'];
     }else{
@@ -37,7 +38,10 @@
         move_uploaded_file($FILE_TEMP, $ACTUAL_IMAGE);
 
     }
-
+    $query = "SELECT * FROM users WHERE id = {$EDIT_ID}";
+    $result = mysqli_query($connection, $query);
+    $row = mysqli_fetch_assoc($result);
+    unlink("../../uploads/user/".$row['profile_img']);
     $query = "UPDATE users SET first_name = '{$EDIT_FIRST_NAME}', last_name = '{$EDIT_LAST_NAME}', email = '{$EDIT_EMAIL}', role = '{$EDIT_USER_ROLE}', profile_img = '{$new_name}' WHERE id = {$EDIT_ID}";
     $result = mysqli_query($connection, $query);
 ?>
