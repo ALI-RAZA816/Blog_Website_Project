@@ -22,6 +22,17 @@ $(document).ready(function(){
     }
     profile_img();
 
+    // load recent users
+    function loadRecentUsers(){
+        $.ajax({
+            url:"script/recent-user.php",
+            success:function(data){
+                $(".recent-users").html(data);
+            }
+        });
+    };
+    loadRecentUsers();
+
     // add category
     $(".addcatBtn").on('click',function(event){
         event.preventDefault();
@@ -125,6 +136,7 @@ $(document).ready(function(){
             url:'script/show-user.php',
             success:function(data){
                 $('.userOuput').html(data);
+                loadRecentUsers();
             }
         })
     }
@@ -178,6 +190,7 @@ $(document).ready(function(){
                     alert("Failed to inserted data");
                 }else if(data == "Data successfully inserted"){
                     loadUsers();
+                    loadRecentUsers();
                     alert("Data successfully inserted");
                     $('.firstname').val('');
                     $('.lastname').val('');
@@ -199,6 +212,7 @@ $(document).ready(function(){
             success:function(data){
                 if(data == "User successfully deleted"){
                     loadUsers();
+                    loadRecentUsers();
                     profile_img();
                     alert("User Successfully Deleted");
                 }else{
@@ -244,6 +258,7 @@ $(document).ready(function(){
                 $(".edit-user-form").css("display","none");
                 loadUsers();
                 profile_img();
+                loadRecentUsers();
             },
             error:function(){
                 alert("Error");
@@ -283,6 +298,7 @@ $(document).ready(function(){
                     alert("Successful");
                     window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/dashboard.php";
                     profile_img();
+                    loadRecentUsers();
                 }else if(data == "Incorrect email"){
                     alert("Incorrect email");
                 }else if(data == "Incorrect password"){

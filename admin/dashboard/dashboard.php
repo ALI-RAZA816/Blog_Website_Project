@@ -144,45 +144,17 @@
                         <div class="col-xl-3 px-2">
                             <div>
                                 <h4 class='my-4 fw-bold recent-user'>Recent Users</h4>
-                                <div class='row g-0 p-0'>
-                                    <div class="col-12 mb-2 d-flex align-items-center users rounded-2 p-2">
-                                        <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:50px;width:50px;'alt="">
-                                        <div class='mt-2 ms-2'>
-                                            <h2 class='fw-bold fs-6 text-dark mb-0'>Name</h2>
-                                            <p class='text-secondary m-0 fs-6'>alirazamujahid102@gmail.com</p>
-                                            <span class="badge rounded-pill text-bg-dark text-uppercase">Admin</span>
+                                <div class='recent-users'>
+                                    <!-- <div class='row g-0 p-0'>
+                                        <div class="col-12 mb-2 d-flex align-items-center users rounded-2 p-2">
+                                            <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:50px;width:50px;'alt="">
+                                            <div class='mt-2 ms-2'>
+                                                <h2 class='fw-bold fs-6 text-dark mb-0'>Name</h2>
+                                                <p class='text-secondary m-0 fs-6'>alirazamujahid102@gmail.com</p>
+                                                <span class="badge rounded-pill text-bg-dark text-uppercase">Admin</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class='row g-0 p-0'>
-                                    <div class="col-12 mb-2 d-flex align-items-center users rounded-2 p-2">
-                                        <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:50px;width:50px;'alt="">
-                                        <div class='mt-2 ms-2'>
-                                            <h2 class='fw-bold fs-6 text-dark mb-0'>Name</h2>
-                                            <p class='text-secondary m-0 fs-6'>alirazamujahid102@gmail.com</p>
-                                            <span class="badge rounded-pill text-bg-dark text-uppercase">Admin</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='row g-0 p-0'>
-                                    <div class="col-12 mb-2 d-flex align-items-center users rounded-2 p-2">
-                                        <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:50px;width:50px;'alt="">
-                                        <div class='mt-2 ms-2'>
-                                            <h2 class='fw-bold fs-6 text-dark mb-0'>Name</h2>
-                                            <p class='text-secondary m-0 fs-6'>alirazamujahid102@gmail.com</p>
-                                            <span class="badge rounded-pill text-bg-dark text-uppercase">Admin</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='row g-0 p-0'>
-                                    <div class="col-12 mb-2 d-flex align-items-center users rounded-2 p-2">
-                                        <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:50px;width:50px;'alt="">
-                                        <div class='mt-2 ms-2'>
-                                            <h2 class='fw-bold fs-6 text-dark mb-0'>Name</h2>
-                                            <p class='text-secondary m-0 fs-6'>alirazamujahid102@gmail.com</p>
-                                            <span class="badge rounded-pill text-bg-dark text-uppercase">Admin</span>
-                                        </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
