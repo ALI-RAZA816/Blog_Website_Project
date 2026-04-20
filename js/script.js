@@ -33,6 +33,17 @@ $(document).ready(function(){
     };
     loadRecentUsers();
 
+      // handle total users | admins
+    function users_admins(){
+        $.ajax({
+            url:'script/user-count.php',
+            success:function(data){
+                $('.user-cards').html(data);
+            }
+        });
+    };
+    users_admins();
+
     // add category
     $(".addcatBtn").on('click',function(event){
         event.preventDefault();
@@ -130,13 +141,14 @@ $(document).ready(function(){
         });
     });
 
-       // show user data from database
+    // show user data from database
     function loadUsers(){
         $.ajax({
             url:'script/show-user.php',
             success:function(data){
                 $('.userOuput').html(data);
                 loadRecentUsers();
+                users_admins();
             }
         })
     }
@@ -191,7 +203,8 @@ $(document).ready(function(){
                 }else if(data == "Data successfully inserted"){
                     loadUsers();
                     loadRecentUsers();
-                    alert("Data successfully inserted");
+                    users_admins();
+                    alert("Account successfully created");
                     $('.firstname').val('');
                     $('.lastname').val('');
                     $('.password').val('');
@@ -211,10 +224,11 @@ $(document).ready(function(){
             data:{delete_id:deleteId},
             success:function(data){
                 if(data == "User successfully deleted"){
-                    loadUsers();
-                    loadRecentUsers();
-                    profile_img();
                     alert("User Successfully Deleted");
+                    loadUsers();
+                    profile_img();
+                    loadRecentUsers();
+                    users_admins();
                 }else{
                     alert("User cannot Deleted");
                 }
@@ -258,6 +272,7 @@ $(document).ready(function(){
                 $(".edit-user-form").css("display","none");
                 loadUsers();
                 profile_img();
+                users_admins();
                 loadRecentUsers();
             },
             error:function(){
@@ -299,6 +314,7 @@ $(document).ready(function(){
                     window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/dashboard.php";
                     profile_img();
                     loadRecentUsers();
+                    users_admins();
                 }else if(data == "Incorrect email"){
                     alert("Incorrect email");
                 }else if(data == "Incorrect password"){
@@ -316,6 +332,7 @@ $(document).ready(function(){
            url:"script/logout.php",
            success:function(){
                 profile_img();
+                users_admins();
                window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/index.php";
             }
        });
