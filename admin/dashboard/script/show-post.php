@@ -36,10 +36,16 @@
                                 </td>
                                 <td class='align-middle'><span class='badge rounded-pill text-bg-secondary'>{$row['status']}</span></td>
                                 <td class='align-middle' >";
-                                if(!empty($row['profile_img'])){
-                                    $output .= "<img src='../uploads/user/{$row['profile_img']}' class='img-fluid rounded-circle' style='height:40px;width:40px;'alt=''>";
+                                if(empty($row['profile_img'])){
+                                    if(empty($row['first_letter'])){
+                                        $output .= "<span class='text-secondary bg-secondary-subtle ms-2' style='display:inline-block;height:40px;width:40px;border-radius:100%;border:1px solid #a7a7a7;text-align:center;line-height:40px;'>U</span>
+                                        <span class='text-secondary ms-2'>Unkown</span>";
+                                    }else{
+                                        $output .= "<span class='text-secondary bg-secondary-subtle ms-2' style='display:inline-block;height:40px;width:40px;border-radius:100%;border:1px solid #a7a7a7;text-align:center;line-height:40px;'>{$row['first_letter']}</span>
+                                        <span class='text-secondary ms-2'>Unkown</span>";
+                                    }
                                 }else{
-                                    $output .= "<span class='bg-secondary-subtle'  style='display:inline-block;border-radius:100%;text-align:center;line-height:40px;height:40px;width:40px;border:1px solid #c0c0c0;'>{$row['first_letter']}</span>";
+                                    $output .= "<img src='../uploads/user/{$row['profile_img']}' class='img-fluid rounded-circle' style='height:40px;width:40px;'alt=''>";
                                 }
                                     $output .= "<span class='text-secondary ms-2'>{$row['first_name']}</span>
                                 </td>

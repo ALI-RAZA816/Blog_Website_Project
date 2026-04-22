@@ -95,10 +95,20 @@
                                                                 </div>
                                                             </td>
                                                             <td><span class='badge mt-3 rounded-pill text-bg-secondary'>{$row['status']}</span></td>
-                                                            <td>
-                                                                <img src='../uploads/user/{$row['profile_img']}' class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt=''>
-                                                                <span class='text-secondary ms-2'>{$row['first_name']}</span>
-                                                            </td>
+                                                            <td>";
+                                                            if(empty($row['profile_img'])){
+                                                                if(empty($row['first_letter'])){
+                                                                    echo "<span class='text-secondary bg-secondary-subtle ms-2' style='display:inline-block;height:40px;width:40px;border-radius:100%;border:1px solid #a7a7a7;text-align:center;line-height:40px;'>U</span>
+                                                                <span class='text-secondary ms-2'>Unkown</span>";
+                                                                }else{
+                                                                echo "<span class='text-secondary bg-secondary-subtle ms-2' style='display:inline-block;height:40px;width:40px;border-radius:100%;border:1px solid #a7a7a7;text-align:center;line-height:40px;'>{$row['first_letter']}</span>
+                                                                <span class='text-secondary ms-2'>{$row['first_name']}</span>";
+                                                                }
+                                                            }else{
+                                                                echo "<img src='../uploads/user/{$row['profile_img']}' class='img-fluid border-primary rounded-circle mt-2' style='height:40px;width:40px;'alt=''>
+                                                                 <span class='text-secondary ms-2'>{$row['first_name']}</span>";
+                                                            }
+                                                            echo "</td>
                                                             <td><p class='text-secondary mt-3'>{$row['date']}</p></td>
                                                         </tr>";
                                                 }
