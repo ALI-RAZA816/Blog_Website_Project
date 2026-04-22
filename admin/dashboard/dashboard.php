@@ -1,3 +1,4 @@
+   <?php include "config.php";?>
 <div class="cotainer-fluid">
     <div class="row g-0">
         <div class="col-lg-2 vh-100 bg-white sidebar px-3 py-4">
@@ -12,25 +13,49 @@
                         <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
                                 <span class='fw-bold fs-5 mb-3'>Posts</span>
-                                <span class='fw-bold fs-1 text-secondary'>12,500</span>
+                                <?php
+                                    $query1 = "SELECT COUNT(*) AS total_posts FROM posts";
+                                    $result1 = mysqli_query($connection, $query1);
+                                    $row1 = mysqli_fetch_assoc($result1);
+                                    $count1 = str_pad($row1['total_posts'],2,0,STR_PAD_LEFT);
+                                    echo "<span class='fw-bold fs-1 text-secondary'>{$count1}</span>";
+                                ?>
                             </div>
                         </div>
                         <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
                                 <span class='fw-bold fs-5 mb-3'>Categories</span>
-                                <span class='fw-bold fs-1 text-secondary'>12,500</span>
+                                <?php
+                                    $query2 = "SELECT COUNT(*) AS total_category FROM category";
+                                    $result2 = mysqli_query($connection, $query2);
+                                    $row2 = mysqli_fetch_assoc($result2);
+                                    $count2 = str_pad($row2['total_category'],2,0,STR_PAD_LEFT);
+                                    echo "<span class='fw-bold fs-1 text-secondary'>{$count2}</span>";
+                                ?>
                             </div>
                         </div>
                         <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
                                 <span class='fw-bold fs-5 mb-3'>Users</span>
-                                <span class='fw-bold fs-1 text-secondary'>12,500</span>
+                                <?php
+                                    $query3 = "SELECT COUNT(*) AS total_users FROM users";
+                                    $result3 = mysqli_query($connection, $query3);
+                                    $row3 = mysqli_fetch_assoc($result3);
+                                    $count3 = str_pad($row3['total_users'],2,0,STR_PAD_LEFT);
+                                    echo "<span class='fw-bold fs-1 text-secondary'>{$count3}</span>";
+                                ?>
                             </div>
                         </div>
                         <div class ='col-md-6 col-xl-3'>
                             <div class="d-flex flex-column cards bg-white px-3 py-3">
                                 <span class='fw-bold fs-5 mb-3'>Admins</span>
-                                <span class='fw-bold fs-1 text-secondary'>12,500</span>
+                                   <?php
+                                    $query4 = "SELECT COUNT(*) AS total_admins FROM users WHERE role = 'admin'";
+                                    $result4 = mysqli_query($connection, $query4);
+                                    $row4 = mysqli_fetch_assoc($result4);
+                                    $count4 = str_pad($row4['total_admins'],2,0,STR_PAD_LEFT);
+                                    echo "<span class='fw-bold fs-1 text-secondary'>{$count4}</span>";
+                                ?>
                             </div>
                         </div>
                     </div>
