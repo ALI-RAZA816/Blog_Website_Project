@@ -8,7 +8,7 @@
     $POST_CATEGORY = $_POST['category'];
     // $POST_IMG =$_FILES['post-img'];
     $AUTHOR = ($_SESSION['userid']) ? $_SESSION['userid'] : 0;
-    $DATE = date('l, F j, Y');
+    $DATE = date('F y');
 
   
     $IMAGE_NAME = $_FILES['post-img']['name'];

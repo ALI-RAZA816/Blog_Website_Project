@@ -54,6 +54,18 @@ $(document).ready(function(){
     };
     users_admins();
 
+    // show uploaded-post on post.php file
+    function show_posts(){
+        $.ajax({
+            url:'script/show-post.php',
+            success:function(data){
+                $('.posts').html(data);
+            }
+        });
+    }
+
+    show_posts();
+
     // add category
     $(".addcatBtn").on('click',function(event){
         event.preventDefault();
@@ -413,5 +425,22 @@ $(document).ready(function(){
             }
         });
     });
+
+    // handle post-page pagination
+
+    $(document).on('click','.post-pagination', function(event){
+        event.preventDefault();
+        var post_page_number = $(this).data("postpage");
+
+        $.ajax({
+            url:'script/show-post.php',
+            type:'POST',
+            data:{page_no:post_page_number},
+            success:function(data){
+                $('.posts').html(data);
+            }
+        })
+    })
+
 
 });
