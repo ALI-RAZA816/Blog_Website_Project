@@ -7,70 +7,31 @@
         <div class="col-lg-10 border">
             <?php include "header.php" ?>
             <div class="row g-0 p-0 my-4 px-4">
-                <form action="" class='col-md-12 d-md-flex'>
+                <form action="" class='row'>
                     <div class="col-md-8 rounded-3 p-3 bg-white" style='box-shadow:0 0 10px #efefef;'>
-                        <input type="text" placeholder='Post Title' class='form-control my-3 post-title'>
-                        <textarea name="" class='form-control post-description' placeholder='Description' id=""></textarea>
+                        <input type="text" placeholder='Post Title' name='post-title' class='form-control my-3 post-title'>
+                        <textarea name="post-description" class='form-control post-description' placeholder='Description' id=""></textarea>
                     </div>
                     <div class="col-md-4">
                         <div class='ms-md-4 mt-3 mt-md-0 px-4 py-3 bg-white rounded-3' style='box-shadow:0 0 10px #efefef;'>
                             <h3 class='text-uppercase mb-3 fs-6 text-dark'>Categories</h3>
                             <div class='category-box px-2' style='max-height:260px;overflow-y:auto;'>
-                                <div class="form-check">
+                                <!-- <div class="form-check">
                                     <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
                                     <label class="form-check-label" for="radioDefault1">Default radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                    <label class="form-check-label" for="radioDefault1">Default radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                    <label class="form-check-label" for="radioDefault1">Default radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                    <label class="form-check-label" for="radioDefault1">Default radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                    <label class="form-check-label" for="radioDefault1">Default radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                    <label class="form-check-label" for="radioDefault1">Default radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                    <label class="form-check-label" for="radioDefault1">Default radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                    <label class="form-check-label" for="radioDefault1">Default radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                    <label class="form-check-label" for="radioDefault1">Default radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                    <label class="form-check-label" for="radioDefault1">Default radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                    <label class="form-check-label" for="radioDefault1">Default radio</label>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class='ms-md-4 mt-3 d-flex rounded-3 flex-column justify-content-center align-items-center bg-white' style='box-shadow:0 0 10px #efefef;'>
-                            <div class='col-8'>
+                            <div class='col-8 post-images'>
                                 <img src="../images/free image icon png vector.png" class='img-fluid' alt="">
                             </div>
                             <div class="input-group px-4 mb-3">
-                                <input type="file" class="form-control" id="inputGroupFile02">
+                                <input type="file" name='post-img' class="form-control post-img" id="inputGroupFile02">
                             </div>
                         </div>
                     </div>
+                    <button class="btn btn-primary post-upload-button mb-3 d-block w-100">Upload Post</button>
                 </form>
             </div>
         </div>

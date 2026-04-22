@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     // load categories from Database
     function loadCategories(){
         $.ajax({
@@ -11,6 +10,17 @@ $(document).ready(function(){
     }
     loadCategories();
 
+    function posts_category(){
+        $.ajax({
+            url:'script/load-post-category.php',
+            success:function(data){
+                $('.category-box').html(data);
+            }
+        });
+    }
+    posts_category();
+
+    
     // handle header profile-img
     function profile_img(){
         $.ajax({
@@ -348,6 +358,58 @@ $(document).ready(function(){
             data:{pageNo:user_page_no},
             success:function(data){
                 $('.userOuput').html(data);
+            }
+        });
+    });
+
+    // handle upload post
+    $('.post-upload-button').on('click',function(event){
+        event.preventDefault();
+        var title = $('.post-title').val();
+        var description = $(".post-description").val();
+        var category = $('.post-category').val();
+        var image = $('.post-img').val();
+
+        if(!title){
+            alert("Title is required");
+            return;
+        }
+
+        if(!description){
+            alert("Description is required");
+            return;
+        }
+
+        if(!category){
+            alert("Category is required");
+            return;
+        }
+
+        if(!image){
+            alert("Image is required");
+            return;
+        }
+
+        $('.category').each(function(){
+            if($(this).is(":checked")){
+                value = $(this).val();
+            };
+        });
+        var form = $(this).closest('form')[0];
+        var formdata = new FormData(form);
+
+        $.ajax({
+            url:'script/upload-post.php',
+            type:'POST',
+            data: formdata,
+            contentType:false,
+            processData:false,
+            success:function(data){
+                if(data == "Post successfully uploaded"){
+                    alert("Post successfully uploaded");
+                }else{
+                    alert("Post cannot be uploaded");
+                }
             }
         });
     });

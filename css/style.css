@@ -411,3 +411,9 @@ body{
     align-items: center;
     background-color: rgba(51, 51, 51,.50);
 }
+
+.post-upload-button,
+.post-upload-button:hover{
+    border-color:royalblue;
+    background-color: royalblue;
+}
