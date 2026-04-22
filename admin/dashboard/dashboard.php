@@ -77,91 +77,33 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class='row g-0 p-0'>
-                                                    <div class="col-3 p-1 bg-secondary-subtle rounded-2"><img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid' alt=""></div>
-                                                    <div class="col-9">
-                                                        <h2 class='text-dark fs-6 ms-2'>The future of Minilist Architect</h2>
-                                                        <span class="badge ms-2 rounded-pill text-bg-secondary">Category</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge mt-3 rounded-pill text-bg-secondary">Published</span></td>
-                                            <td>
-                                                <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt="">
-                                                <span class='text-secondary ms-2'>Ali Raza</span>
-                                            </td>
-                                            <td><p class='text-secondary mt-3'>Oct 24, 2025</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class='row g-0 p-0'>
-                                                    <div class="col-3 p-1 bg-secondary-subtle rounded-2"><img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid' alt=""></div>
-                                                    <div class="col-9">
-                                                        <h2 class='text-dark fs-6 ms-2'>The future of Minilist Architect</h2>
-                                                        <span class="badge ms-2 rounded-pill text-bg-secondary">Category</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge mt-3 rounded-pill text-bg-secondary">Published</span></td>
-                                            <td>
-                                                <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt="">
-                                                <span class='text-secondary ms-2'>Ali Raza</span>
-                                            </td>
-                                            <td><p class='text-secondary mt-3'>Oct 24, 2025</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class='row g-0 p-0'>
-                                                    <div class="col-3 p-1 bg-secondary-subtle rounded-2"><img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid' alt=""></div>
-                                                    <div class="col-9">
-                                                        <h2 class='text-dark fs-6 ms-2'>The future of Minilist Architect</h2>
-                                                        <span class="badge ms-2 rounded-pill text-bg-secondary">Category</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge mt-3 rounded-pill text-bg-secondary">Published</span></td>
-                                            <td>
-                                                <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt="">
-                                                <span class='text-secondary ms-2'>Ali Raza</span>
-                                            </td>
-                                            <td><p class='text-secondary mt-3'>Oct 24, 2025</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class='row g-0 p-0'>
-                                                    <div class="col-3 p-1 bg-secondary-subtle rounded-2"><img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid' alt=""></div>
-                                                    <div class="col-9">
-                                                        <h2 class='text-dark fs-6 ms-2'>The future of Minilist Architect</h2>
-                                                        <span class="badge ms-2 rounded-pill text-bg-secondary">Category</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge mt-3 rounded-pill text-bg-secondary">Published</span></td>
-                                            <td>
-                                                <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt="">
-                                                <span class='text-secondary ms-2'>Ali Raza</span>
-                                            </td>
-                                            <td><p class='text-secondary mt-3'>Oct 24, 2025</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class='row g-0 p-0'>
-                                                    <div class="col-3 p-1 bg-secondary-subtle rounded-2"><img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid' alt=""></div>
-                                                    <div class="col-9">
-                                                        <h2 class='text-dark fs-6 ms-2'>The future of Minilist Architect</h2>
-                                                        <span class="badge ms-2 rounded-pill text-bg-secondary">Category</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge mt-3 rounded-pill text-bg-secondary">Published</span></td>
-                                            <td>
-                                                <img src="../images/1ec99389-6d1a-4d68-bee3-38ab2100d489.jpg" class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt="">
-                                                <span class='text-secondary ms-2'>Ali Raza</span>
-                                            </td>
-                                            <td><p class='text-secondary mt-3'>Oct 24, 2025</p></td>
-                                        </tr>
+                                        <?php 
+
+                                            include "config.php";
+                                            $query = "SELECT * FROM posts LEFT JOIN category ON posts.category = category.id LEFT JOIN users ON posts.author = users.id LIMIT 0, 5";
+                                            $result = mysqli_query($connection, $query);
+                                            if(mysqli_num_rows($result) > 0){
+                                                while($row = mysqli_fetch_assoc($result)){
+                                                    echo "<tr>
+                                                            <td>
+                                                                <div class='row g-0 p-0'>
+                                                                    <div class='col-3 p-1 bg-secondary-subtle rounded-2'><img src='../uploads/post_image/{$row['post_img']}' class='img-fluid' alt=''></div>
+                                                                    <div class='col-9'>
+                                                                        <h2 class='text-dark fs-6 ms-2'>{$row['title']}</h2>
+                                                                        <span class='badge ms-2 rounded-pill text-bg-secondary'>{$row['category_name']}</span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td><span class='badge mt-3 rounded-pill text-bg-secondary'>{$row['status']}</span></td>
+                                                            <td>
+                                                                <img src='../uploads/user/{$row['profile_img']}' class='img-fluid rounded-circle mt-2' style='height:40px;width:40px;'alt=''>
+                                                                <span class='text-secondary ms-2'>{$row['first_name']}</span>
+                                                            </td>
+                                                            <td><p class='text-secondary mt-3'>{$row['date']}</p></td>
+                                                        </tr>";
+                                                }
+                                            }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
