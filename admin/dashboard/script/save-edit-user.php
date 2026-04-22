@@ -11,7 +11,7 @@
 
 
     if(empty($_FILES['upload_file']['name'])){
-        $IMAGE_NAME = $_POST['old_image'];
+        $new_name = $OLD_IMAGE;
     }else{
         $IMAGE_NAME = $_FILES['upload_file']['name'];
         $FILE_TYPE = $_FILES['upload_file']['type'];

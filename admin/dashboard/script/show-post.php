@@ -35,9 +35,13 @@
                                     </div>
                                 </td>
                                 <td class='align-middle'><span class='badge rounded-pill text-bg-secondary'>{$row['status']}</span></td>
-                                <td class='align-middle'>
-                                    <img src='../uploads/user/{$row['profile_img']}' class='img-fluid rounded-circle' style='height:40px;width:40px;'alt=''>
-                                    <span class='text-secondary ms-2'>{$row['first_name']}</span>
+                                <td class='align-middle' >";
+                                if(!empty($row['profile_img'])){
+                                    $output .= "<img src='../uploads/user/{$row['profile_img']}' class='img-fluid rounded-circle' style='height:40px;width:40px;'alt=''>";
+                                }else{
+                                    $output .= "<span class='bg-secondary-subtle'  style='display:inline-block;border-radius:100%;text-align:center;line-height:40px;height:40px;width:40px;border:1px solid #c0c0c0;'>{$row['first_letter']}</span>";
+                                }
+                                    $output .= "<span class='text-secondary ms-2'>{$row['first_name']}</span>
                                 </td>
                                 <td class='align-middle'><p class='text-secondary'>{$row['date']}</p></td>
                                 <td class='align-middle'>
