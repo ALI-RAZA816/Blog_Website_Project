@@ -63,7 +63,6 @@ $(document).ready(function(){
             }
         });
     }
-
     show_posts();
 
     // add category
@@ -427,7 +426,6 @@ $(document).ready(function(){
     });
 
     // handle post-page pagination
-
     $(document).on('click','.post-pagination', function(event){
         event.preventDefault();
         var post_page_number = $(this).data("postpage");
@@ -441,6 +439,20 @@ $(document).ready(function(){
             }
         })
     })
+
+    // delete post
+    $(document).on("click",".delete-post",function(){
+        var delete_post_id = $(this).data("deletepostid");
+        $.ajax({
+            url:"script/delete-post.php",
+            type:'POST',
+            data:{post_delete_id:delete_post_id},
+            success:function(data){
+                $('.posts').html(data);
+                show_posts();
+            }
+        });
+    });
 
 
 });

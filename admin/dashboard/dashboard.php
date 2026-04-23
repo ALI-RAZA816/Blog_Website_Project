@@ -1,4 +1,4 @@
-   <?php include "config.php";?>
+<?php include "config.php";?>
 <div class="cotainer-fluid">
     <div class="row g-0">
         <div class="col-lg-2 vh-100 bg-white sidebar px-3 py-4">
@@ -80,7 +80,7 @@
                                         <?php 
 
                                             include "config.php";
-                                            $query = "SELECT * FROM posts LEFT JOIN category ON posts.category = category.id LEFT JOIN users ON posts.author = users.id LIMIT 0, 5";
+                                            $query = "SELECT * FROM posts LEFT JOIN category ON posts.category = category.id LEFT JOIN users ON posts.author = users.id ORDER BY posts.id DESC LIMIT 0, 5";
                                             $result = mysqli_query($connection, $query);
                                             if(mysqli_num_rows($result) > 0){
                                                 while($row = mysqli_fetch_assoc($result)){

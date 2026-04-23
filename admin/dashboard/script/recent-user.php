@@ -1,7 +1,7 @@
 <?php 
 
     include "config.php";
-    $query = "SELECT * FROM users LIMIT 0, 3";
+    $query = "SELECT * FROM users ORDER BY users.id DESC LIMIT 0, 3";
     $result = mysqli_query($connection, $query);
     $output ='';
     if(mysqli_num_rows($result) > 0){
@@ -23,6 +23,8 @@
                             </div>
                         </div>";
         }
+    }else{
+        echo "<h2 class='text-secondary fs-5'>No Recent User</h2>";
     }
     echo $output;
 

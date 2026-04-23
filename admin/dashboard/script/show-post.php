@@ -7,10 +7,9 @@
         $pageNo = 1;
     }
     $offset = ($pageNo - 1) * $limit;
-    $query = "SELECT * FROM posts LEFT JOIN category ON posts.category = category.id LEFT JOIN users ON posts.author = users.id LIMIT {$offset}, {$limit}";
+    $query = "SELECT posts.id AS post_id, posts.title, posts.description, posts.category, posts.status, posts.author, posts.date, posts.post_img, category.id, category.category_name, users.id AS user_id, users.first_name, users.username, users.first_letter, users.profile_img FROM posts LEFT JOIN category ON posts.category = category.id LEFT JOIN users ON posts.author = users.id LIMIT {$offset}, {$limit}";
     $result = mysqli_query($connection, $query);
     $output = '';
-    $output1 = '';
     if(mysqli_num_rows($result) > 0){
         $output .= "<table class='table'>
                         <thead>
@@ -51,8 +50,8 @@
                                 </td>
                                 <td class='align-middle'><p class='text-secondary'>{$row['date']}</p></td>
                                 <td class='align-middle'>
-                                    <i class='fa-solid fa-edit me-2'></i>
-                                    <i class='fa-solid fa-trash'></i>
+                                    <i class='fa-solid fa-edit me-2 ' data-edit-postid = {$row['post_id']}></i>
+                                    <i class='fa-solid fa-trash delete-post' data-deletepostid = {$row['post_id']}></i>
                                 </td>
                             </tr>";
         }
