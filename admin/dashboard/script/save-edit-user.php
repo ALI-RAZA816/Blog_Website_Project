@@ -36,12 +36,12 @@
         $new_name = time()."-".basename($IMAGE_NAME);
         $ACTUAL_IMAGE = "../../uploads/user/".$new_name;
         move_uploaded_file($FILE_TEMP, $ACTUAL_IMAGE);
+        $query1 = "SELECT * FROM users WHERE id = {$EDIT_ID}";
+        $result1 = mysqli_query($connection, $query1);
+        $row1 = mysqli_fetch_assoc($result1);
+        unlink("../../uploads/user/".$row1['profile_img']);
 
     }
-    $query = "SELECT * FROM users WHERE id = {$EDIT_ID}";
-    $result = mysqli_query($connection, $query);
-    $row = mysqli_fetch_assoc($result);
-    unlink("../../uploads/user/".$row['profile_img']);
     $query = "UPDATE users SET first_name = '{$EDIT_FIRST_NAME}', last_name = '{$EDIT_LAST_NAME}', email = '{$EDIT_EMAIL}', role = '{$EDIT_USER_ROLE}', profile_img = '{$new_name}' WHERE id = {$EDIT_ID}";
     $result = mysqli_query($connection, $query);
 ?>

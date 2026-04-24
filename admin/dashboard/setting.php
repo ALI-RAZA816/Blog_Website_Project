@@ -17,20 +17,20 @@
                     <form action="">
                         <div class='mb-4'>
                             <label for="" class='form-label'>Website Name</label>
-                            <input type="text" class='form-control'>
+                            <input type="text" name='web_name' id='website_title' class='form-control'>
                         </div>
                         <div class='mb-4'>
                             <label for="" class='form-label'>Subscription Description</label>
-                            <textarea type="text" class='form-control' style='height:100px;'></textarea>
+                            <textarea type="text" class='form-control' id='sub_description' name='sub_description' style='height:100px;'></textarea>
                         </div>
                         <div class='mb-4'>
                             <label for="" class='form-label'>Footer Description</label>
-                            <input type="text" class='form-control'>
+                            <input type="text" class='form-control' id='f_description' name='f_description'>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="file" class="form-control" id="inputGroupFile02">
+                            <input type="file" class="form-control" id='logo' name='web_logo' id="inputGroupFile02">
                         </div>
-                        <button class='btn btn-primary' style='background-color:royalblue;border:none;'>Save Changes</button>
+                        <button class='btn btn-primary save-changes' style='background-color:royalblue;border:none;'>Save Changes</button>
                 </form>
                 </div>
             </div>

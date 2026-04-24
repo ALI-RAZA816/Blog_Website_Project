@@ -496,4 +496,34 @@ $(document).ready(function(){
         });
     });
 
+    // handle website setting 
+    $(".save-changes").on('click',function(event){
+        event.preventDefault();
+        if(!$("#website_title").val()){
+            alert("Website name is required");
+            return;
+        }
+        if(!$("#sub_description").val()){
+            alert("Subscription description is required");
+            return;
+        }
+        if(!$("#f_description").val()){
+            alert("Footer description is required");
+            return;
+        }
+        var form = $(this).closest('form')[0];
+        var formData = new FormData(form);
+
+        $.ajax({
+            url:'script/settings.php',
+            type:'POST',
+            data: formData,
+            contentType:false,
+            processData:false,
+            success:function(data){
+                alert("Changes saved successfully");
+            }
+        });
+    });
+
 });

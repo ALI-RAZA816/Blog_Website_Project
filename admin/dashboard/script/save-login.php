@@ -29,6 +29,7 @@
             $_SESSION['firstname'] = $row['first_name'];
             $_SESSION['lastname'] = $row['last_name'];
             $_SESSION['username'] = $row['username'];
+            $_SESSION['user_role'] = $row['role'];
             $_SESSION['passwordname'] = $row['password'];
             $_SESSION['email'] = $row['email'];
             echo "Login Successful";

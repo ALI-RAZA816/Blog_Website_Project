@@ -21,8 +21,19 @@
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center">
                 <div class="col-sm-6 d-flex justify-content-between align-items-center col-md-6">
-                    <h2 class="navbar-brand m-0"><a href="index.php" class='logo-name text-dark text-decoration-none fw-bold fs-1'>Meranda</a></h2>
-                      <i class='fa-solid fa-bars' id='bars'></i>
+                    <!-- Meranda -->
+                    <?php 
+                        include "config.php";
+                        $query = "SELECT * FROM setting";
+                        $result = mysqli_query($connection, $query);
+                        $row = mysqli_fetch_assoc($result);
+                        if($row['website_name'] == ''){
+                            echo " <img src='images/logo/{$row['logo']}' style='height:50px;width:50px;object-fit:cover;' alt=''>";
+                        }else{
+                            echo "<h2 class='navbar-brand m-0'><a href='index.php' class='logo-name text-dark text-decoration-none fw-bold fs-1'>{$row['website_name']}</a></h2>";
+                        }
+                    ?>
+                    <i class='fa-solid fa-bars' id='bars'></i>
                 </div>
                 <div class="col-sm-6 col-md-6 search d-flex justify-content-sm-end align-items-center ">
                     <input type="text" class="form-control me-3" placeholder='Search'>
