@@ -417,3 +417,16 @@ body{
     border-color:royalblue;
     background-color: royalblue;
 }
+
+
+/* edit post-modal-box  */
+.edit-post-modal-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    background-color: #949494;
+}

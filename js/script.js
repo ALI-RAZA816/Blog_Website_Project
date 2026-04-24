@@ -416,8 +416,9 @@ $(document).ready(function(){
             contentType:false,
             processData:false,
             success:function(data){
-                if(data == "Post successfully uploaded"){
-                    alert("Post successfully uploaded");
+                if(data === 'Post successfully uploaded'){
+                    alert('Post successfully uploaded');
+                    window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/ost.php";
                 }else{
                     alert("Post cannot be uploaded");
                 }
@@ -454,5 +455,45 @@ $(document).ready(function(){
         });
     });
 
+    // show edit-post-modal-box
+    $(document).on('click',".edit-post",function(){
+        var editId = $(this).data('editpostid')
+        $(".edit-post-modal-box").css('display','block');
+        $.ajax({
+            url:'script/edit-post-modal-box.php',
+            type:'POST',
+            data:{edit_id:editId},
+            success:function(data){
+                $('.edit-post-modal-box').html(data);
+            }
+        })
+    });
+
+    // hide edit-post-modal-box
+    $(document).on('click',".hide-edit-post-box",function(){
+        $(".edit-post-modal-box").css('display','none');
+    });
+
+    $(document).on('click',".edit-post-button",function(event){
+        event.preventDefault();
+        var form = $(this).closest('form')[0];
+        var formdata = new FormData(form);
+        $.ajax({
+            url:'script/save-edit-post.php',
+            type:'POST',
+            data:formdata,
+            contentType:false,
+            processData:false,
+            success:function(data){
+                if(data == "Post updated"){
+                    alert("Post updated");
+                    $(".edit-post-modal-box").css('display','none');
+                    show_posts();
+                }else{
+                    alert("Post cannot updated");
+                }
+            }
+        });
+    });
 
 });

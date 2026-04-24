@@ -50,7 +50,7 @@
                                 </td>
                                 <td class='align-middle'><p class='text-secondary'>{$row['date']}</p></td>
                                 <td class='align-middle'>
-                                    <i class='fa-solid fa-edit me-2 ' data-edit-postid = {$row['post_id']}></i>
+                                    <i class='fa-solid fa-edit edit-post me-2 ' data-editpostid = {$row['post_id']}></i>
                                     <i class='fa-solid fa-trash delete-post' data-deletepostid = {$row['post_id']}></i>
                                 </td>
                             </tr>";
