@@ -1,8 +1,6 @@
 CREATE DATABASE blog_websites;
 USE blog_websites;
 
-
-
 CREATE TABLE `category`(
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `category_name` VARCHAR(200) NOT NULL 
@@ -29,4 +27,12 @@ CREATE TABLE `users`(
     `role` VARCHAR(200) NOT NULL,
     `first_letter` VARCHAR(200) NOT NULL,
     `profile_img` VARCHAR(200) NOT NULL
+) AUTO_INCREMENT = 1;
+
+CREATE TABLE `setting`(
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `website_name` VARCHAR(200) NOT NULL,
+    `sub_description` VARCHAR(500) NOT NULL, 
+    `f_description` VARCHAR(500) NOT NULL, 
+    `logo` VARCHAR(500) NOT NULL, 
 ) AUTO_INCREMENT = 1;
