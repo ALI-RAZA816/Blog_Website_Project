@@ -418,7 +418,7 @@ $(document).ready(function(){
             success:function(data){
                 if(data === 'Post successfully uploaded'){
                     alert('Post successfully uploaded');
-                    window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/ost.php";
+                    window.location.href = "http://localhost/Blog_Website_Project/admin/dashboard/post.php";
                 }else{
                     alert("Post cannot be uploaded");
                 }

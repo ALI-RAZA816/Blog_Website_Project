@@ -32,9 +32,19 @@
         $result1 = mysqli_query($connection, $query);
         $totalRecords = mysqli_num_rows($result1);
         $totalPages = ceil($totalRecords/$limit);
+         if($page <= 1){
+            $disabled = 'disabled';
+        }else{
+            $disabled = '';
+        }
+        if($totalPages <= $page){
+            $disabled1 = 'disabled';
+        }else{
+            $disabled1 = '';
+        }
         $output .= "     <nav>
                         <ul class='pagination d-flex mt-3 justify-content-end me-5'>
-                        <li class='page-item'><a href='#' class='page-link d-flex align-items-center' style='height:100%;'><i class='fa-solid fa-angle-left'></i></a></li>";
+                        <li class='page-item $disabled'><a href='#' class='page-link d-flex align-items-center' style='height:100%;' data-page='".($page - 1)."'><i class='fa-solid fa-angle-left'></i></a></li>";
                         for($i=1; $i <= $totalPages; $i++){
                             if($i == $page){
                                 $active = 'active';
@@ -43,7 +53,7 @@
                             }
                             $output .= "<li class='page-item'><a class='page-link $active' href='category.php?' data-page={$i}>{$i}</a></li>";
                         }
-        $output .= " <li class='page-item'><a class='page-link d-flex align-items-center' style='height:100%;' href='#'><i class='fa-solid fa-angle-right'></i></a></li></ul>
+        $output .= " <li class='page-item $disabled1'><a class='page-link d-flex align-items-center' style='height:100%;' href='#' data-page='".($page + 1)."'><i class='fa-solid fa-angle-right'></i></a></li></ul>
                 </nav>";
     }else{
         echo "<h2 class='fs-4 text-dark m-0'>No record found</h2>";

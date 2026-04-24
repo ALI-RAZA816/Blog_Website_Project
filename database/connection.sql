@@ -1,6 +1,8 @@
 CREATE DATABASE blog_websites;
 USE blog_websites;
 
+
+
 CREATE TABLE `category`(
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `category_name` VARCHAR(200) NOT NULL 
@@ -34,5 +36,18 @@ CREATE TABLE `setting`(
     `website_name` VARCHAR(200) NOT NULL,
     `sub_description` VARCHAR(500) NOT NULL, 
     `f_description` VARCHAR(500) NOT NULL, 
-    `logo` VARCHAR(500) NOT NULL, 
+    `logo` VARCHAR(500) NOT NULL
 ) AUTO_INCREMENT = 1;
+
+-- foreign key and primary still remain implemented in this schema
+-- foreign key and primary still remain implemented in this schema
+-- foreign key and primary still remain implemented in this schema
+-- foreign key and primary still remain implemented in this schema
+-- foreign key and primary still remain implemented in this schema
+-- foreign key and primary still remain implemented in this schema
+-- foreign key and primary still remain implemented in this schema
+-- foreign key and primary still remain implemented in this schema
+-- foreign key and primary still remain implemented in this schema
+-- foreign key and primary still remain implemented in this schema
+-- foreign key and primary still remain implemented in this schema
+-- foreign key and primary still remain implemented in this schema
