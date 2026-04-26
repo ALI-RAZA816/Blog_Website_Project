@@ -5,6 +5,7 @@
     $EDIT_TITLE = $_POST['edit-post-title'];
     $EDIT_DESCRIPTION = $_POST['edit-post-description'];
     $EDIT_CATEGORY = $_POST['edit-category'];
+    $OLD_CATEGORY = $_POST['old-category'];
     $OLD_IMG = $_POST['old-edit-img'];
     $AUTHOR = $_SESSION['first_name'];
     $query = "SELECT * FROM posts WHERE id = {$EDIT_POST_ID}";
@@ -36,8 +37,12 @@
         $ACTUAL_IMAGE = "../../uploads/post_image/".$new_name;
         move_uploaded_file($FILE_TEMP, $ACTUAL_IMAGE);
     }
-    $query1 = "UPDATE posts SET title = '{$EDIT_TITLE}', description = '{$EDIT_DESCRIPTION}', category = {$EDIT_CATEGORY}, author = '{$AUTHOR}', post_img = '{$new_name}' WHERE id = {$EDIT_POST_ID}";
-    $result1 = mysqli_query($connection, $query1);
+    $query1 = "UPDATE posts SET title = '{$EDIT_TITLE}', description = '{$EDIT_DESCRIPTION}', category = {$EDIT_CATEGORY}, author = '{$AUTHOR}', post_img = '{$new_name}' WHERE id = {$EDIT_POST_ID};";
+    if($OLD_CATEGORY != $EDIT_CATEGORY){
+        $query1 .= "UPDATE category SET post_number = post_number - 1 WHERE category.id = {$OLD_CATEGORY};";
+        $query1 .= "UPDATE category SET post_number = post_number + 1 WHERE category.id = {$EDIT_CATEGORY}";
+    }
+    $result1 = mysqli_multi_query($connection, $query1);
     if($result1){
         echo 'Post updated';
     }else{

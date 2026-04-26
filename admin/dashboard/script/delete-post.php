@@ -8,6 +8,7 @@
     // if(!empty($row['profile_img'])){
         unlink("../../uploads/post_image/".$row['post_img']);
     // }
-    $query = "DELETE FROM posts WHERE id = {$POST_DELETE_ID}";
-    $result = mysqli_query($connection, $query);
+    $query = "DELETE FROM posts WHERE id = {$POST_DELETE_ID};";
+    $query .= "UPDATE category SET post_number = post_number - 1 WHERE category.id = {$row['category']}";
+    $result = mysqli_multi_query($connection, $query);
 ?>

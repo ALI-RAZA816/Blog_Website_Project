@@ -28,8 +28,9 @@
     $new_name = time()."-".basename($IMAGE_NAME);
     $ACTUAL_IMAGE = "../../uploads/post_image/".$new_name;
     move_uploaded_file($FILE_TEMP, $ACTUAL_IMAGE);
-    $query = "INSERT INTO posts (title, description, category, author, date, post_img) VALUES ('{$POST_TITLE}', '{$POST_DESCRIPTION}', {$POST_CATEGORY}, {$AUTHOR}, '{$DATE}', '{$new_name}')";
-    $result = mysqli_query($connection, $query);
+    $query = "INSERT INTO posts (title, description, category, author, date, post_img) VALUES ('{$POST_TITLE}', '{$POST_DESCRIPTION}', {$POST_CATEGORY}, {$AUTHOR}, '{$DATE}', '{$new_name}');";
+    $query .= "UPDATE category SET post_number = post_number + 1 WHERE category.id = {$POST_CATEGORY}";
+    $result = mysqli_multi_query($connection, $query);
     if($result){
         echo "Post successfully uploaded";
     }else{

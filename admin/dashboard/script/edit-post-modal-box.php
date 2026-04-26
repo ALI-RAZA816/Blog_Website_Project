@@ -31,7 +31,8 @@
                                                     $output .= "<div class='form-check'>
                                                                     <input class='form-check-input post-category' type='radio' name='edit-category' value='{$row1['id']}' id='{$row1['category_name']}' $checked >
                                                                     <label class='form-check-label' for='{$row1['category_name']}'>{$row1['category_name']}</label>
-                                                                </div>";
+                                                                </div>
+                                                                <input class='form-check-input post-category' style='width:100%;height:50px;' type='hidden' name='old-category' value='{$row['category']}'>";
                                                 }
                                             }
                                         $output .= "</div>
